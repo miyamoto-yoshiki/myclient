@@ -1,0 +1,49 @@
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.middle-contents{
+  display: flex;
+  justify-content: space-around;
+}
+
+.todays-task,
+.client-index{
+  border: solid black 7px;
+
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-index{
+  height: 300px;
+  width: 300px;
+  padding: 30px;
+
+}
+
+.todays-task{
+  height: 300px;
+  width: 300px;
+  padding: 30px;
+}
+
+.box{
+  font-size: 30px;
+  padding: 15px;
+}
