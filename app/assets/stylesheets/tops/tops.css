@@ -1,62 +1,47 @@
-main > .container {
-  padding: 60px 15px 0;
-}
-
-.footer {
-  background-color: #f5f5f5;
-}
-
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-code {
-  font-size: 80%;
-}
-
-.container{
+.contents{
   display: flex;
+  justify-content: space-around;
+  height: 100vh;
+}
+.left-contents,
+.right-contents{
+  margin-top: 100px;
+  height: 500px;
+  border: #ccc 1px;
+  background-color: white;
 }
 
 .left-contents{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  margin-right: 100px;
+  width: 400px;
 }
-
+.indexs{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+}
+.right-contents{
+  width: 600px;
+}
 .task-index,
 .client-index{
-  border: solid black 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #434a54;
+  height: 200px;
+  width: 300px;
+  padding: 30px;
+  
 }
-
 .client-index{
-  height: 200px;
-  width: 300px;
-  padding: 30px;
-  margin-top: 70px;
+  margin: 30px;
 }
-
-.task-index{
-  height: 200px;
-  width: 300px;
-  padding: 30px;
-  margin-top: 30px;
+.client-index{
+  margin: 10px 30px 30px 30px;
 }
+.text-a{
 
-.right-contents{
-  border: black solid 7px;
-  height: 500px;
-  width: 600px;
-  margin-top: 100px;
 }
-
-
 .btn-circle {
   display: inline-block;
   text-decoration: none;

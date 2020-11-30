@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="header.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a class="apps-name" href="/">My client</a>
+      </h1>
+      <nav class="pc-nav">
+        <ul>
+          <li><%= link_to 'ログイン', new_user_session_path, method: :get, class: "sign" %></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
