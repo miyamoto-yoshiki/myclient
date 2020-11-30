@@ -15,35 +15,107 @@ code {
   font-size: 80%;
 }
 
-.middle-contents{
+.container{
   display: flex;
-  justify-content: space-around;
 }
 
-.todays-task,
+.left-contents{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.task-index,
 .client-index{
   border: solid black 7px;
-
-  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .client-index{
-  height: 300px;
+  height: 200px;
   width: 300px;
   padding: 30px;
-
+  margin-top: 70px;
 }
 
-.todays-task{
-  height: 300px;
+.task-index{
+  height: 200px;
   width: 300px;
   padding: 30px;
+  margin-top: 30px;
 }
 
-.box{
-  font-size: 30px;
-  padding: 15px;
+.right-contents{
+  border: black solid 7px;
+  height: 500px;
+  width: 600px;
+  margin-top: 100px;
+}
+
+
+.btn-circle {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 700;
+  background-color: #000;
+  letter-spacing: 1.5px;
+  width: 220px;
+  text-align: center;
+  padding: 24px;
+  position: relative;
+  opacity: 1 !important;
+  transition: all 0.4s;
+  overflow: hidden;
+  border: none;
+}
+.btn-circle:before {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 220px;
+  background-color: #FFF;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-100%, 100%);
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.btn-circle:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #FFF;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 18px;
+  transition: all 0.4s;
+}
+.btn-circle:hover {
+  color: #000;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-circle:hover:after {
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #FFF;
+  right: 12px;
+}
+.btn-circle:hover:before {
+  transform: translate(-12px, 60px);
+}
+.btn-circle span {
+  position: relative;
+  z-index: 99;
 }
