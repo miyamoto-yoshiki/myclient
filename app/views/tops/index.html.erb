@@ -1,83 +1,28 @@
-<!doctype html>
-<html lang="ja"  class="h-100" >
-  <head>
-    <title>固定されたフッター・ナビゲーションバーテンプレート for Bootstrap · Bootstrap</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-    <link href="../tops.scss" rel="stylesheet">
-  </head>
-  <body  class="d-flex flex-column h-100" >
-    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
-  <div class="container">
-    <span class="skiplink-text">Skip to main content</span>
-  </div>
-</a>
 
-    <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <!-- <a class="navbar-brand" href="#">Fixed navbar</a> -->
-    <a class="navbar-brand" href="#">My client</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-          <a class="nav-link" href="#">ホーム <span class="sr-only">（現在位置）</span></a>
-        </li>
-        <%# <li class="nav-item">
-          <!-- <a class="nav-link" href="#">Link</a> -->
-          <a class="nav-link" href="#">リンク</a>
-        </li>
-        <li class="nav-item">
-          <!-- <a class="nav-link disabled" href="#">Disabled</a> -->
-          <a class="nav-link disabled" href="#">無効</a>
-        </li> %>
-      </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
-        <input class="form-control mr-sm-2" type="text" placeholder="検索" aria-label="Search">
-        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
-      </form>
-    </div>
-  </nav>
-</header>
+<link rel="stylesheet" href="tops.scss">
+<link rel="stylesheet" href="tops.css">>
 
-<!-- Begin page content -->
-<main role="main" class="flex-shrink-0">
-  <div class="container">
-    <!-- <h1 class="mt-5">Sticky footer with fixed navbar</h1> -->
-    <h1 class="mt-5">こんにちは</h1>
-    <div class="middle-contents">
+<%= render "a-header"%>
+
+<div class="contents">
+  <div class="left-contents">
+    <div class="indexs">
       <div class="client-index">
-         <div class="box">顧客一覧</div>
+        <a class="btn-circle" href="#">
+          <span class="text-a">顧客一覧</span>
+        </a>
       </div>
-      <div class="todays-task">
-        <div class="box">Todays task</div>
+      <div class="task-index">
+        <a class="btn-circle" href="#">
+          <span class="text-a">タスク一覧</span>
+        </a>
       </div>
     </div>
   </div>
-</main>
-
-<footer class="footer mt-auto py-3">
-  <div class="container">
-    <!-- <span class="text-muted">Place sticky footer content here.</span> -->
-    <span class="text-muted">フッターのコンテンツをここに置きます．</span>
+  
+  <div class="right-contents">
+    <div class="tasks">
+      <a class="todays-task">今日のタスク</a>
+    </div>
   </div>
-</footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script>
-  window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery-slim.min.js"><\/script>')
-</script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script><script src="/docs/4.5/assets/js/vendor/anchor.min.js"></script>
-<script src="/docs/4.5/assets/js/vendor/clipboard.min.js"></script>
-<script src="/docs/4.5/assets/js/vendor/bs-custom-file-input.min.js"></script>
-<script src="/docs/4.5/assets/js/src/application.js"></script>
-<script src="/docs/4.5/assets/js/src/search.js"></script>
-<script src="/docs/4.5/assets/js/src/ie-emulation-modes-warning.js"></script>
-  </body>
-</html>
+</div>

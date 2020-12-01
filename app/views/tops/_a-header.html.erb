@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="header.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a class="apps-name" href="/">My client</a>
+      </h1>
+      <nav class="pc-nav">
+        <ul>
+          <% if user_signed_in? %>
+            <%# <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "sign" %></li> 
+          <% else %>
+            <li><%= link_to 'ログイン', new_user_session_path, method: :get, class: "sign" %></li>
+            <li><%= link_to '新規登録',  new_user_registration_path, method: :get, class: "sign" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
