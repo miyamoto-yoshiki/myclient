@@ -1,10 +1,10 @@
-.registration-main {
+.registration-in {
   width: 100vw;
   min-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 300px);
 }
 
 .signin-btn {
@@ -65,4 +65,9 @@
   color: #888;
   font-size: 15px;
   margin-top: 3px;
+}
+
+.text-b{
+  margin-top: 150px ;
+  text-align: center;
 }

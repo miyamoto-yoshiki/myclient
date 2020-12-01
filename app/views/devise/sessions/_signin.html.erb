@@ -4,7 +4,8 @@
   </head>
 
   <body>
-    <%= form_with model: @user, class: 'registration-main', url: user_session_path, method: :post, local: true do |f| %>
+    <h3 class="text-b">ログイン</h3>
+    <%= form_with model: @user, class: 'registration-in', url: user_session_path, method: :post, local: true do |f| %>
       <div class='form-wrap'>
         <div class='login-flash-message'>
           <%= flash[:notice] %>

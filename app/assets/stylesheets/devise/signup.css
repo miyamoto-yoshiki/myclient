@@ -1,4 +1,4 @@
-.registration-main {
+.registration-up {
   width: 100%;
   min-width: 800px;
   display: flex;
@@ -50,6 +50,7 @@
 .input-default {
   width: 100%;
   margin-top: 5px;
+  margin-bottom: 30px;
   height: 48px;
   padding: 10px 16px 8px;
   border-radius: 4px;
@@ -141,4 +142,9 @@
   color: #0099e8;
   text-align: right;
   cursor: pointer;
+}
+
+.text-b{
+  margin-top: 150px ;
+  text-align: center;
 }
