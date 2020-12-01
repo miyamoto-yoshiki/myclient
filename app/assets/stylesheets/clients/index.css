@@ -1,0 +1,12 @@
+.parent{
+  border: black solid 1px;
+  margin-top: 80px;
+  height: 100vh;
+}
+.child-a{
+  background-color: red;
+  height: 40px;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+}
