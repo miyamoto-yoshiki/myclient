@@ -1,5 +1,7 @@
 <%= render "tops/a-header"%>
 
 <div class="parent">
-  <%= link_to '新規顧客登録', clients_path, method: :get, class: "btn-a" %>
+  <div class="child-a">
+    <%= link_to '新規顧客登録', new_client_path, method: :get, class: "btn-c" %>
+  </div>
 </div>

@@ -4,9 +4,11 @@
   height: 100vh;
 }
 .child-a{
-  background-color: red;
   height: 40px;
   width: 100px;
   margin: 0 auto;
   text-align: center;
+  position: fixed;
+  top:700px;
+  left:1200px;
 }

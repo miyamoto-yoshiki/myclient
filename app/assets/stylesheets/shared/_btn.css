@@ -69,3 +69,22 @@
             transform: scale(1.1);
   }
 }
+
+.btn-c{
+	display: block;
+	position: relative;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+}
+.btn-c:hover {
+	 background: #E85A70;
+         color: #fff;
+	 cursor: pointer;
+	 text-decoration: none;
+}
