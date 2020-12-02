@@ -1,14 +1,21 @@
 <%= render "tops/a-header"%>
 
 <div class="parent">
+  
   <h3 class="text-c">登録済み顧客一覧</h3>
   <ol class="clients">
-    <% @allclients.each do |c| %>
-      <li class="client"><%= c.last_name %><%= " " %><%= c.first_name %></li>
-    <% end %>
+    
+      <% @allclients.each do |c| %>
+        <li class="client">
+          <%=link_to client_path(c.id), method: :get do %>
+            <%= c.last_name %><%= " " %><%= c.first_name %>
+          <% end %>
+        </li>
+      <% end %>
+    
   </ol>
 
-  <div class="child-a">
+  <div class="child-z">
     <%= link_to '新規顧客登録', new_client_path, method: :get, class: "btn-c" %>
   </div>
 </div>

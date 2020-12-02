@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
   def index
     @allclients = Client.all
+
   end
 
   def new
@@ -15,6 +16,10 @@ class ClientsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    
   end
 
 
