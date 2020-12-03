@@ -1,10 +1,11 @@
-.registration-up {
+.new-client-form{
   width: 100%;
-  min-width: 800px;
+  /* min-width: 800px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 80px);
+  /* height: calc(100vh - 80px); */
+  align-items: flex-start;
 }
 /* form-wrapは商品購入画面でも使用しています */
 .form-wrap {
@@ -118,8 +119,9 @@
   cursor: pointer;
 }
 
-.register-btn {
+.new-client-btn {
   margin: 0 auto;
+  margin-bottom: 30px;
   max-width: 180px;
   text-align: left;
   background-color: #ffa300;
@@ -143,16 +145,13 @@
   text-align: right;
   cursor: pointer;
 }
-
-.text-b{
-  margin-top: 150px ;
-  text-align: center;
-  margin-bottom: 30px;
+.input-birth-wrap{
+  margin: 0 auto;
+  margin-bottom: 60px;
 }
-
 .child-a{
   margin-top: 120px;
   height: 70px;
   text-align: center;
   padding: auto ;
-  }
+}

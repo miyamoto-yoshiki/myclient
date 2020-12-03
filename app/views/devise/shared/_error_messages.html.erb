@@ -1,0 +1,15 @@
+<%# <head>
+    <link rel="stylesheet" href="signup.css">
+</head> %>
+
+<% if model.errors.any? %>
+  
+    <ul class="error-alert">
+     <div class="error">
+      <% model.errors.full_messages.each do |message| %>
+        <li class='error-message'><%= message %></li>
+      <% end %>
+     </div>
+    </ul>
+
+<% end %>

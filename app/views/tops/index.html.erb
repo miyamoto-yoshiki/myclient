@@ -8,14 +8,10 @@
   <div class="left-contents">
     <div class="indexs">
       <div class="client-index">
-        <a class="btn-circle" href="#">
-          <span class="text-a">顧客一覧</span>
-        </a>
+        <%= link_to '顧客一覧', clients_path, method: :get, class: "btn-a" %>
       </div>
       <div class="task-index">
-        <a class="btn-circle" href="#">
-          <span class="text-a">タスク一覧</span>
-        </a>
+        <%= link_to 'タスク一覧', root_path, method: :get, class: "btn-a" %>
       </div>
     </div>
   </div>

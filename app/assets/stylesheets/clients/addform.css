@@ -1,0 +1,86 @@
+
+.dropdown{
+  display:none;
+}
+
+.add1,
+.test{
+  display:block;
+  padding:2em;
+  background:gold;
+  border-bottom:#fff 1px solid;
+  font-family:sans-serif;
+  letter-spacing:.05em;
+  font-weight:bold;
+}
+.test:hover,
+.add1:hover{
+  background:orange;
+}
+.test::before,
+.add1::before{
+  content:"";
+  display:block;
+  position:absolute;
+  right:5%;
+  width:.5em;
+  height:.5em;
+  border-top:#000 2px solid;
+  border-left:#000 2px solid;
+  transform:rotate(135deg);
+}
+.add1[type="checkbox"]{
+  display:none;
+}
+.add1[for="menu"]{
+  display:block;
+  background:orange;
+}
+.add1[for="menu"]::before{
+  transform:rotate(225deg);
+}
+#menu:checked + .dropdown{
+  display:block;
+}
+
+
+
+.add2,
+.test{
+  display:block;
+  padding:2em;
+  background:gold;
+  border-bottom:#fff 1px solid;
+  font-family:sans-serif;
+  letter-spacing:.05em;
+  font-weight:bold;
+}
+.test:hover,
+.add2:hover{
+  background:orange;
+}
+.test::before,
+.add2::before{
+  content:"";
+  display:block;
+  position:absolute;
+  right:5%;
+  width:.5em;
+  height:.5em;
+  border-top:#000 2px solid;
+  border-left:#000 2px solid;
+  transform:rotate(135deg);
+}
+.add2[type="checkbox"]{
+  display:none;
+}
+.add2[for="menu"]{
+  display:block;
+  background:orange;
+}
+.add2[for="menu"]::before{
+  transform:rotate(225deg);
+}
+#menu:checked + .dropdown{
+  display:block;
+}

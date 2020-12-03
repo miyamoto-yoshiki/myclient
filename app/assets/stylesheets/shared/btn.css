@@ -1,0 +1,129 @@
+.btn-a{
+	display: block;
+	position: relative;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+}
+.btn-a:hover {
+	 background: #1B1B1B;
+         color: #fff;
+	 cursor: pointer;
+	 text-decoration: none;
+}
+.btn-b {
+	display: block;
+	position: relative;
+	width: 130px;
+  padding: 0.8em;
+  margin: 0 5px 10px 5px;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+        border-radius: 30px;
+	border:1px solid #1B1B1B;
+	 -webkit-backface-visibility: hidden; 
+	-moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.btn-b:hover {
+	 cursor: pointer;
+	 text-decoration: none;
+	-webkit-animation: simple_square_btn6 0.5s both;
+	-moz-animation: simple_square_btn6 0.5s both;
+	        animation: simple_square_btn6 0.5s both;
+}
+@-webkit-keyframes simple_square_btn6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@-moz-keyframes simple_square_btn6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+@keyframes simple_square_btn6 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.btn-c{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+  z-index:100;
+}
+.btn-c:hover {
+	 background: #E85A70;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+   z-index:100;
+}
+.btn-d{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+  z-index:100;
+}
+.btn-d:hover {
+	 background: #0C88CA;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+   z-index:100;
+}
+.btn-e{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+  z-index:100;
+}
+.btn-e:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+   z-index:100;
+}#ffa300
