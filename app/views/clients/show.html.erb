@@ -17,8 +17,11 @@
       <%= link_to '一覧に戻る', clients_path, method: :get, class: "btn-d" %>
     </div>
     <div class="next-client">
-      <%= link_to '次の顧客へ進む', root_path, method: :get, class: "btn-c" %>
+      <%= link_to '削除', client_path(@client), method: :delete, class: "btn-c" %>
     </div>
+    <%# <div class="next-client">
+      <%= link_to '次の顧客へ進む', root_path, method: :get, class: "btn-c" %>
+    <%# </div> %>
   </div>
 
   <div class="child-c">

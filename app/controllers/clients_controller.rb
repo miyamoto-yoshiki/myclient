@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :get_client, except: [:index, :new, :create, :destroy]
+  before_action :get_client, except: [:index, :new, :create]
   
 
   def index
@@ -33,6 +33,11 @@ class ClientsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @client.destroy if current_user.id == @client.user_id
+    redirect_to clients_path
   end
 
 
