@@ -70,21 +70,108 @@
           <div class="info-value"><%= @client.build_num %></div>
         <% end %>
       </li>
+      
       <div class="edit-standard">
         <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
       </div>
-
-      
     </ul>
-    
-    <div class="add-info">
 
-        <%= link_to 'フォームを追加する', new_form_path, method: :get, class: "btn-f" %>
-        <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
-      </div>
-    </div>
-
-    
+    <ul class="standard-info">
+      <% @allforms.each do |fo| %>
+        <% if fo.user_id == current_user.id %>
+          <li class="info-box">
+            <% if fo.f_name1? %>
+              <div class="value-name"><%= "#{fo.f_name1}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name2? %>
+              <div class="value-name"><%= "#{fo.f_name2}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          
+          <li class="info-box">
+            <% if fo.f_name3? %>
+              <div class="value-name"><%= "#{fo.f_name3}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name4? %>
+              <div class="value-name"><%= "#{fo.f_name4}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name5? %>
+              <div class="value-name"><%= "#{fo.f_name5}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name6? %>
+              <div class="value-name"><%= "#{fo.f_name6}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name7? %>
+              <div class="value-name"><%= "#{fo.f_name7}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name8? %>
+              <div class="value-name"><%= "#{fo.f_name8}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name9? %>
+              <div class="value-name"><%= "#{fo.f_name9}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+          <li class="info-box">
+            <% if fo.f_name10? %>
+              <div class="value-name"><%= "#{fo.f_name10}:" %></div>
+            <% else %>
+              <% "" %>
+            <% end %>
+            <div class="info-value"><%= "テキスト" %></div>
+          </li>
+        <% end %>
+      <% end %>
+      <% if @allforms.length == 0 %>
+        <%= link_to '追加フォームを作成する', new_form_path, method: :get, class: "btn-g" %>
+      <% else %>
+        <% @allforms.each do |fo| %>
+          <% if fo.user_id == current_user.id %>
+            <%= link_to '追加したフォームを編集する', edit_client_path(@client), method: :get, class: "btn-g" %>
+          <% end %>
+        <% end %>
+    <% end %>
+    </ul>
   </div>
 
 </div>

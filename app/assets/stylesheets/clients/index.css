@@ -23,35 +23,7 @@
   list-style-type: none!important; /*数字を一旦消す*/
   padding:0;
 }
-.clients,
-.client{
-  position: relative;
-  padding: 0.5em;
-  line-height: 1.5em;
-  background: #f1f8ff;
-  border-left : solid 35px #5c9ee7;
-  margin-bottom: 5px;
-}
-.client:before{
-  /* 以下数字をつける */
-  position: absolute;
-  counter-increment: number;
-  content: counter(number);
-  /*数字のデザイン変える*/
-  display:inline-block;
-  color: #5c9ee7;
-  font-family: 'Avenir','Arial Black','Arial',sans-serif;
-  font-weight:bold;
-  font-size: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: -35px;
-  width: 35px;
-  height: 1em;
-  line-height: 1;
-  text-align: center;
-}
+
 .client-name{
   color: black;
   text-decoration: none;

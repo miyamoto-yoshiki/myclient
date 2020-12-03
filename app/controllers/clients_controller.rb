@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
   before_action :get_client, except: [:index, :new, :create]
   
 
@@ -22,6 +22,7 @@ class ClientsController < ApplicationController
   end
 
   def show
+    @allforms = Form.all
   end
 
   def edit
