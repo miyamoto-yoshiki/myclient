@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_103414) do
+ActiveRecord::Schema.define(version: 2020_12_03_090648) do
 
   create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 2020_12_01_103414) do
     t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
+  create_table "forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "f_name1"
+    t.string "f_name2"
+    t.string "f_name3"
+    t.string "f_name4"
+    t.string "f_name5"
+    t.string "f_name6"
+    t.string "f_name7"
+    t.string "f_name8"
+    t.string "f_name9"
+    t.string "f_name10"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_forms_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
     t.string "first_name", null: false
@@ -48,4 +65,5 @@ ActiveRecord::Schema.define(version: 2020_12_01_103414) do
   end
 
   add_foreign_key "clients", "users"
+  add_foreign_key "forms", "users"
 end

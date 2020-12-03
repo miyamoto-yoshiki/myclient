@@ -18,17 +18,17 @@
   display: flex;
   justify-content: space-around;
   /* background-color: lightcoral; */
-  height: calc(100vh - 200px);
+  /* height: calc(100vh - 200px); */
   padding: 10px 0;
 }
 
 .standard-info,
 .add-info{
-  background-color:;
   width: 550px;
   display: flex;
   display: block;
   padding: 10px;
+  background-color: lightcoral;
 }
 .info-box{
   display: flex;

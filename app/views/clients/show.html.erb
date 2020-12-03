@@ -73,10 +73,15 @@
       <div class="edit-standard">
         <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
       </div>
+
+      
     </ul>
     
     <div class="add-info">
-      a
+
+        <%= link_to 'フォームを追加する', new_form_path, method: :get, class: "btn-f" %>
+        <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
+      </div>
     </div>
 
     
