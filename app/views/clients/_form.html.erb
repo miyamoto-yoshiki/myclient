@@ -5,7 +5,10 @@
   </head>
 
   <body>
-    <h3 class="text-b">新規顧客登録</h3>
+    <div class="child-a">
+      <h3 class="text-title">新規顧客登録</h3>
+    </div>
+    
     <%= form_with model: @client, url: clients_path(@client), method: :post, class:"new-client-form", local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
 
@@ -88,7 +91,7 @@
           <label class="form-text">市区町村</label>
           <span class="form-any">任意</span>
         </div>
-        <%= f.text_field :city, class:"input-default", id:"city", placeholder:"例）福岡市中央区"%>
+        <%= f.text_field :city, class:"input-default", id:"city", placeholder:"例）福岡市中央区天神"%>
       </div>
 
       <div class="form-group">
@@ -96,7 +99,7 @@
           <label class="form-text">番地</label>
           <span class="form-any">任意</span>
         </div>
-        <%= f.text_field :details, class:"input-default", id:"addresses", placeholder:"例）天神1-1-1"%>
+        <%= f.text_field :details, class:"input-default", id:"addresses", placeholder:"例）1-1-1"%>
       </div>
 
       <div class="form-group">

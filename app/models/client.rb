@@ -1,4 +1,6 @@
 class Client < ApplicationRecord
+  default_scope -> { order(last_kana: :asc) }
+
   belongs_to :user
 
 

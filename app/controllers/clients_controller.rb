@@ -1,7 +1,9 @@
 class ClientsController < ApplicationController
-  def index
-    @allclients = Client.all
+  before_action :authenticate_user!, except: [:index]
+  
 
+  def index
+    @allclients = Client.all.order('last_kana ASC')
   end
 
   def new
@@ -19,7 +21,7 @@ class ClientsController < ApplicationController
   end
 
   def show
-    
+    @client = Client.find(params[:id])
   end
 
 

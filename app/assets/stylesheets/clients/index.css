@@ -1,7 +1,10 @@
 .parent{
-  border: black solid 1px;
-  margin-top: 80px;
   height: 100vh;
+}
+.child-a{
+  text-align: center;
+  padding: auto ;
+
 }
 .child-z{
   height: 40px;
@@ -13,11 +16,6 @@
   left:1200px;
 }
 
-.text-c{
-  margin-top: 70px ;
-  margin-bottom: 30px;
-  text-align: center;
-}
 
 
 .clients {
@@ -41,7 +39,7 @@
   content: counter(number);
   /*数字のデザイン変える*/
   display:inline-block;
-  color: white;
+  color: #5c9ee7;
   font-family: 'Avenir','Arial Black','Arial',sans-serif;
   font-weight:bold;
   font-size: 15px;
@@ -54,3 +52,30 @@
   line-height: 1;
   text-align: center;
 }
+.client-name{
+  color: black;
+  text-decoration: none;
+}
+
+/* .text-title {
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+.text-title:before, 
+.text-title:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+.text-title:before {
+  left: 7px;
+}
+.text-title:after {
+  right: 7px;
+} */

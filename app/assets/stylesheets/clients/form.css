@@ -149,7 +149,9 @@
   margin: 0 auto;
   margin-bottom: 60px;
 }
-.text-b{
-  margin-top: 150px ;
+.child-a{
+  margin-top: 120px;
+  height: 70px;
   text-align: center;
+  padding: auto ;
 }

@@ -1,0 +1,47 @@
+.parent{
+  height: 100vh;
+  /* background-color: lightblue; */
+}
+.child-a{
+  text-align: center;
+  /* background-color: white; */
+}
+.child-d{
+  display: flex;
+  justify-content: space-between;
+}
+.back-index,
+.next-client{
+  margin: 0 100px 10px 100px;
+}
+.child-c{
+  display: flex;
+  justify-content: space-around;
+  /* background-color: lightcoral; */
+  height: calc(100vh - 200px);
+  padding: 10px 0;
+}
+
+.standard-info,
+.add-info{
+  background-color: black;
+  width: 550px;
+  display: flex;
+  display: block;
+  padding: 10px;
+}
+.info-box{
+  display: flex;
+  margin: 20px auto 10px;
+  background-color: white;
+  height: 40px;
+  align-items: center;
+}
+.info-value{
+  font-weight: bold;
+}
+.value-name{
+  width: 130px;
+  text-align: right;
+  margin-right: 10px;
+}

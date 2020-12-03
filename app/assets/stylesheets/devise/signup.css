@@ -147,4 +147,12 @@
 .text-b{
   margin-top: 150px ;
   text-align: center;
+  margin-bottom: 30px;
 }
+
+.child-a{
+  margin-top: 120px;
+  height: 70px;
+  text-align: center;
+  padding: auto ;
+  }

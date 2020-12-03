@@ -1,1 +1,82 @@
-<%= render "tops/a-header" %>
+<div class="parent">
+  <%= render "tops/a-header" %>
+
+  <div class="child-a">
+    <h2 class="client-name">
+      <ruby>
+        <%= @client.last_name %><%= " " %><%= @client.first_name %>
+        <rt>
+          <%= @client.last_kana %><%= " " %><%= @client.first_kana %>
+        </rt>
+      </ruby>
+    </h2>
+  </div>
+
+  <div class="child-d">
+    <div class="back-index">
+      <%= link_to '一覧に戻る', clients_path, method: :get, class: "btn-d" %>
+    </div>
+    <div class="next-client">
+      <%= link_to '次の顧客へ進む', root_path, method: :get, class: "btn-c" %>
+    </div>
+  </div>
+
+  <div class="child-c">
+    <ul class="standard-info">
+      <li class="info-box">
+          <div class="value-name"><%= "電話番号:"%></div>
+          <div class="info-value"><%= @client.phone_num %></div>
+      </li>
+      <li class="info-box">
+          <div class="value-name"><%= "メールアドレス:"%></div>
+          <div class="info-value"><%= @client.email %></div>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "生年月日:"%></div>
+        <% if @client.birthday? %>
+          <div class="info-value"><%= @client.birthday %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "郵便番号:"%></div>
+        <% if @client.post_num? %>
+          <div class="info-value"><%= @client.post_num %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "都道府県:"%></div>
+        <% if @client.prefecture? %>
+         <div class="info-value"><%= @client.prefecture %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "市区町村:"%></div>
+        <% if @client.city? %>
+         <div class="info-value"><%= @client.city %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "番地:"%></div>
+        <% if @client.details? %>
+          <div class="info-value"><%= @client.details %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "建物名:"%></div>
+        <% if @client.build_num? %>
+          <div class="info-value"><%= @client.build_num %></div>
+        <% end %>
+      </li>
+      <div class="edit-standard">
+        <%= link_to '編集する', clients_path, method: :get, class: "btn-d" %>
+      </div>
+    </ul>
+    
+    <div class="add-info">
+      a
+    </div>
+
+    
+  </div>
+
+</div>
