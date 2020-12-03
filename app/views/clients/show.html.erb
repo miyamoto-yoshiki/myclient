@@ -167,7 +167,7 @@
       <% else %>
         <% @allforms.each do |fo| %>
           <% if fo.user_id == current_user.id %>
-            <%= link_to '追加したフォームを編集する', edit_client_path(@client), method: :get, class: "btn-g" %>
+            <%= link_to '追加したフォームを編集する', edit_form_path(@form), method: :get, class: "btn-g" %>
           <% end %>
         <% end %>
     <% end %>

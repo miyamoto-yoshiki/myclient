@@ -23,9 +23,11 @@ class ClientsController < ApplicationController
 
   def show
     @allforms = Form.all
+    @form = Form.find(params[:id])
   end
 
   def edit
+    
   end
 
   def update

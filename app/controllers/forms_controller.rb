@@ -14,7 +14,18 @@ class FormsController < ApplicationController
     end
   end
 
-  
+  def edit
+    @form = Form.find(params[:id])
+  end
+
+  def update
+    @form = Form.find(params[:id])
+    if @form.update(form_params)
+      redirect_to client_path
+    else
+      render :edit
+    end
+  end
 
   private
   def form_params
