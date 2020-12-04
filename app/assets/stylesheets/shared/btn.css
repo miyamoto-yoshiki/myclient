@@ -158,7 +158,6 @@
   border:1px solid #1B1B1B;
   font-weight: bold;
 	z-index:100;
-	margin-right:220px ;
 }
 .btn-g:hover {
 	 background: #ffa300;
@@ -185,4 +184,64 @@
 .btn-h:active {
   transform: translateY(4px);
   border-bottom: none;
+}
+.btn-i{
+	display: block;
+	width: 250px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin-left: 34px;
+}
+.btn-i:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+   z-index:100;
+}
+.btn-j{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin:0 350px 0 270px;
+}
+.btn-j:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+	 z-index:100;
+}
+.btn-k{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin: 0 auto;
+}
+.btn-k:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+	 z-index:100;
 }

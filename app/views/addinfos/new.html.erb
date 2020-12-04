@@ -1,0 +1,96 @@
+<%= render "tops/a-header" %>
+
+
+<div class="child-a">
+      <h3 class="text-title">追加したフォームの情報を入力</h3>
+</div>
+
+<%= form_with model: @addinfo, url: addinfos_path(@addinfo), method: :post, class:"add-form-parent", local: true do |f| %>
+  <% unless @allforms.length == 0 %>
+  <% @allforms.each do |fo| %>
+    <% if fo.user_id == current_user.id %>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name1? %>
+            <label class="form-text"><%= fo.f_name1 %></label>
+            <%= f.text_field :add_text1, class:"add-text-input", id:"add_text1" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name2? %>
+            <label class="form-text"><%= fo.f_name2 %></label>
+            <%= f.text_field :add_text2, class:"add-text-input", id:"add_text2" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name3? %>
+            <label class="form-text"><%= fo.f_name3 %></label>
+            <%= f.text_field :add_text3, class:"add-text-input", id:"add_text3" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-add-text-wrap'>
+          <% if fo.f_name4? %>
+            <label class="form-text"><%= fo.f_name4 %></label>
+            <%= f.text_field :add_text4, class:"add-text-input", id:"add_text4" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name5? %>
+            <label class="form-text"><%= fo.f_name5 %></label>
+            <%= f.text_field :add_text5, class:"add-text-input", id:"add_text5" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name6? %>
+            <label class="form-text"><%= fo.f_name6 %></label>
+            <%= f.text_field :add_text6, class:"add-text-input", id:"add_text6" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name7? %>
+            <label class="form-text"><%= fo.f_name7 %></label>
+            <%= f.text_field :add_text7, class:"add-text-input", id:"add_text7" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name8? %>
+            <label class="form-text"><%= fo.f_name8 %></label>
+            <%= f.text_field :add_text8, class:"add-text-input", id:"add_text8" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name9? %>
+            <label class="form-text"><%= fo.f_name9 %></label>
+            <%= f.text_field :add_text9, class:"add-text-input", id:"add_text9" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <% if fo.f_name10? %>
+            <label class="form-text"><%= fo.f_name10 %></label>
+            <%= f.text_field :add_text10, class:"add-text-input", id:"add_text10" %>
+          <% end %>
+        </div>
+      </div>
+      <%= f.submit "保存する" ,class:"btn-k" %>
+    <% end %>
+  <% end %>
+  <% end %>
+<% end %>

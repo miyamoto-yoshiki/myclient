@@ -7,15 +7,15 @@
   </div>
   
   <ol class="clients">
-    
-      <% @allclients.each do |c| %>
+    <% @allclients.each do |c| %>
+      <% if c.user_id == current_user.id %>
         <li class="client">
           <%=link_to client_path(c.id), method: :get, class:"client-name" do %>
             <%= c.last_name %><%= " " %><%= c.first_name %>
           <% end %>
         </li>
       <% end %>
-    
+    <% end %>
   </ol>
 
   <div class="child-z">

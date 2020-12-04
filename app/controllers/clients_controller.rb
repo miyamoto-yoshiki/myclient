@@ -23,7 +23,7 @@ class ClientsController < ApplicationController
 
   def show
     @allforms = Form.all
-    @form = Form.find(params[:id])
+    @allinfos = Addinfo.all
   end
 
   def edit

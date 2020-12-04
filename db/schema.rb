@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_090648) do
+ActiveRecord::Schema.define(version: 2020_12_04_023049) do
+
+  create_table "addinfos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "add_text1"
+    t.string "add_text2"
+    t.string "add_text3"
+    t.string "add_text4"
+    t.string "add_text5"
+    t.string "add_text6"
+    t.string "add_text7"
+    t.string "add_text8"
+    t.string "add_text9"
+    t.string "add_text10"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_addinfos_on_user_id"
+  end
 
   create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
@@ -64,6 +81,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_090648) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addinfos", "users"
   add_foreign_key "clients", "users"
   add_foreign_key "forms", "users"
 end
