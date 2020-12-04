@@ -70,10 +70,6 @@
           <div class="info-value"><%= @client.build_num %></div>
         <% end %>
       </li>
-      
-      <div class="edit-standard">
-        <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
-      </div>
     </ul>
 
     <ul class="standard-info">
@@ -162,16 +158,24 @@
           </li>
         <% end %>
       <% end %>
-      <% if @allforms.length == 0 %>
-        <%= link_to '追加フォームを作成する', new_form_path, method: :get, class: "btn-g" %>
-      <% else %>
-        <% @allforms.each do |fo| %>
-          <% if fo.user_id == current_user.id %>
-            <%= link_to '追加したフォームを編集する', edit_form_path(@form), method: :get, class: "btn-g" %>
-          <% end %>
-        <% end %>
-    <% end %>
     </ul>
+  </div>
+
+  <div class="btn-box">
+    <div class="edit-standard">
+      <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
+    </div>
+    <% if @allforms.length == 0 %>
+      <%= link_to '追加フォームを作成する', new_form_path, method: :get, class: "btn-g" %>
+    <% else %>
+      <% @allforms.each do |fo| %>
+        <% if fo.user_id == current_user.id %>
+          <%= link_to '追加したフォームを編集する', edit_form_path(@form), method: :get, class: "btn-g" %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    
   </div>
 
 </div>
