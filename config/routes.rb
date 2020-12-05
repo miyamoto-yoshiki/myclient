@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root to:'tops#index'
   resources :clients
   resources :forms, only:[:new, :create, :edit, :update]
-  resources :addinfos, only:[:new, :create]
+  resources :addinfos, only:[:new, :create, :edit, :update]
 end

@@ -1,6 +1,7 @@
 class Client < ApplicationRecord
   default_scope -> { order(last_kana: :asc) }
 
+  
   belongs_to :user
 
   with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: '全角文字を使用してください' } do

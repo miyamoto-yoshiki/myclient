@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_023049) do
     t.string "add_text9"
     t.string "add_text10"
     t.bigint "user_id", null: false
+    t.integer "client_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_addinfos_on_user_id"

@@ -15,13 +15,15 @@ class ClientsController < ApplicationController
     @client = Client.new(client_params)
     if @client.valid?
       @client.save
-      redirect_to clients_path
+      redirect_to client_path
     else
       render :new
     end
   end
 
   def show
+    @form = Form.find_by(user_id: current_user.id)
+    @addinfo = Addinfo.find_by(user_id: current_user.id)
     @allforms = Form.all
     @allinfos = Addinfo.all
   end
@@ -45,10 +47,10 @@ class ClientsController < ApplicationController
 
 
   private
+   
   def client_params
     params.require(:client).permit(:last_name, :first_name, :last_kana, :first_kana, :email, :phone_num, :birthday, :post_num, :prefecture, :city, :details, :build_num, :post_num).merge(user_id: current_user.id)
   end
-
   def get_client
     @client = Client.find(params[:id])
   end

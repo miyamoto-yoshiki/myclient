@@ -73,132 +73,83 @@
     </ul>
 
     <ul class="standard-info">
-      <% @allforms.each do |fo| %>
-      <% @allinfos.each do |i|%>
-        <% if fo.user_id == current_user.id %>
-          <li class="info-box">
-            <% if fo.f_name1? %>
-              <div class="value-name"><%= "#{fo.f_name1}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text1 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name2? %>
-              <div class="value-name"><%= "#{fo.f_name2}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text2 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          
-          <li class="info-box">
-            <% if fo.f_name3? %>
-              <div class="value-name"><%= "#{fo.f_name3}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text3 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name4? %>
-              <div class="value-name"><%= "#{fo.f_name4}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text4 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name5? %>
-              <div class="value-name"><%= "#{fo.f_name5}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text5 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name6? %>
-              <div class="value-name"><%= "#{fo.f_name6}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text6 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name7? %>
-              <div class="value-name"><%= "#{fo.f_name7}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text7 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name8? %>
-              <div class="value-name"><%= "#{fo.f_name8}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text8 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name9? %>
-              <div class="value-name"><%= "#{fo.f_name9}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text9 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
-          <li class="info-box">
-            <% if fo.f_name10? %>
-              <div class="value-name"><%= "#{fo.f_name10}:" %></div>
-                <% if fo.user_id == i.user_id %>
-                  <div class="info-value"><%= i.add_text10 %></div>
-                <% end %>
-            <% else %>
-              <%= "" %>
-            <% end %>
-          </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name1}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text1 %></div>
         <% end %>
-      <% end %>
-      <% end %>
-    </ul>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name2}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text2 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name3}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text3 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name4}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text4 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name5}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text5 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name6}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text6 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name7}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text7 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name8}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text8 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name9}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text9 %></div>
+        <% end %>
+      </li>
+      <li class="info-box">
+        <div class="value-name"><%= "#{@form.f_name10}:" %></div>
+        <% if @addinfo.client_id == @client.id %>
+          <div class="info-value"><%= @addinfo.add_text10 %></div>
+        <% end %>
+      </li>
   </div>
 
   <div class="btn-box">
     <div class="edit-standard">
       <%= link_to '編集', edit_client_path(@client), method: :get, class: "btn-j" %>
     </div>
-    <% if @allforms.length == 0 %>
-      <%= link_to '追加フォームを作成', new_form_path, method: :get, class: "btn-g" %>
+    <% if @form.nil? %>
+      <%= link_to '追加フォームの作成', new_form_path, method: :get, class: "btn-l" %>
     <% else %>
-      <% @allforms.each do |fo| %>
-        <% if fo.user_id == current_user.id %>
-          <%= link_to '追加フォーム名の編集', edit_form_path(fo.id), method: :get, class: "btn-i" %>
-          <%= link_to '追加フォームの内容を編集', new_addinfo_path, method: :get, class: "btn-i" %>
-        <% end %>
-      <% end %>
+      <%= link_to 'フォーム名の編集', edit_form_path(@form.id,@client), method: :get, class: "btn-i" %>
     <% end %>
-<%# <%= link_to '追加フォーム名の編集', new_client_path, method: :get, class: "btn-e" %>
-    
+
+    <% if @addinfo.nil? %>
+      <%= link_to '追加情報の入力', new_addinfo_path(:client_info => @client), method: :get, class: "btn-i" %>
+    <% else %>
+      <%= link_to '追加情報の編集', edit_addinfo_path(@addinfo.id, @client), method: :get, class: "btn-i" %>
+    <% end %>
   </div>
 
 </div>

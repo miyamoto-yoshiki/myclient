@@ -16,6 +16,7 @@
 }
 .child-c{
   display: flex;
+  margin-top: 20px;
   justify-content: space-around;
   background-color: #3333;
   /* height: calc(100vh - 200px); */
