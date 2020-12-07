@@ -11,8 +11,7 @@ class CreateAddinfos < ActiveRecord::Migration[6.0]
       t.string :add_text8
       t.string :add_text9
       t.string :add_text10
-      t.references :user,    null: false, foreign_key: true
-      t.integer :client_id,  null: false
+      t.references :client,    null: false, foreign_key: true
       t.timestamps
     end
   end

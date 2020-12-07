@@ -3,7 +3,6 @@
 
 <div class="child-a">
       <h3 class="text-title">追加したフォームの情報を入力</h3>
-      <%= @client.id %>
 </div>
 
 <%= form_with model: @addinfo, url: addinfos_path(@addinfo), method: :post, class:"add-form-parent", local: true do |f| %>

@@ -23,11 +23,10 @@ ActiveRecord::Schema.define(version: 2020_12_04_023049) do
     t.string "add_text8"
     t.string "add_text9"
     t.string "add_text10"
-    t.bigint "user_id", null: false
-    t.integer "client_id", null: false
+    t.bigint "client_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_addinfos_on_user_id"
+    t.index ["client_id"], name: "index_addinfos_on_client_id"
   end
 
   create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -82,7 +81,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_023049) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "addinfos", "users"
+  add_foreign_key "addinfos", "clients"
   add_foreign_key "clients", "users"
   add_foreign_key "forms", "users"
 end

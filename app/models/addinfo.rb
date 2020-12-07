@@ -1,7 +1,3 @@
 class Addinfo < ApplicationRecord
-  belongs_to :user
-
-  
-
-  validates :client_id, presence: true
+  belongs_to :client
 end

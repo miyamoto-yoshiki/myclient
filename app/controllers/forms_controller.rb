@@ -21,7 +21,7 @@ class FormsController < ApplicationController
   def update
     @form = Form.find(params[:id])
     if @form.update(form_params)
-      redirect_to root_path
+      redirect_to clients_path
     else
       render :edit
     end
