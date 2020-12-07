@@ -1,0 +1,70 @@
+<%= render "tops/a-header" %>
+
+<div class="child-a">
+      <h3 class="text-title">追加したフォームの情報を編集</h3>
+</div>
+
+<%= form_with model: @addinfo, url: addinfo_path(@addinfo), method: :put, class:"add-form-parent", local: true do |f| %>
+  <%= f.hidden_field :client_id, :value => @client.id %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name1 %></label>
+      <%= f.text_field :add_text1, class:"add-text-input", id:"add_text1" %>
+    </div>    
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name2 %></label>
+      <%= f.text_field :add_text2, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name3 %></label>
+      <%= f.text_field :add_text3, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name4 %></label>
+      <%= f.text_field :add_text4, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name5 %></label>
+      <%= f.text_field :add_text5, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name6 %></label>
+      <%= f.text_field :add_text6, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name7 %></label>
+      <%= f.text_field :add_text7, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name8 %></label>
+      <%= f.text_field :add_text8, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name9 %></label>
+      <%= f.text_field :add_text9, class:"add-text-input" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text"><%= @form.f_name10 %></label>
+      <%= f.text_field :add_text10, class:"add-text-input" %>
+    </div>
+  </div>
+  <%= f.submit "保存する" ,class:"btn-h" %>
+<% end %>

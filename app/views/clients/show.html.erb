@@ -17,7 +17,7 @@
       <%= link_to '一覧に戻る', clients_path, method: :get, class: "btn-d" %>
     </div>
     <div class="next-client">
-      <%= link_to '削除', client_path(@client), method: :delete, class: "btn-c" %>
+      <%= button_to '削除', client_path(@client), method: :delete, class: "btn-c" %>
     </div>
     <%# <div class="next-client">
       <%= link_to '次の顧客へ進む', root_path, method: :get, class: "btn-c" %>
@@ -70,14 +70,108 @@
           <div class="info-value"><%= @client.build_num %></div>
         <% end %>
       </li>
-      <div class="edit-standard">
-        <%= link_to '編集する', edit_client_path(@client), method: :get, class: "btn-f" %>
-      </div>
     </ul>
-    
-    <div class="add-info">
-      a
+
+    <ul class="standard-info">
+      <% unless @form.nil? %>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name1}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text1 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name2}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text2 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name3}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text3 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name4}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text4 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name5}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text5 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name6}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text6 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name7}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text7 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name8}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text8 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name9}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text9 %></div>
+            <% end %>
+          <% end %>
+        </li>
+        <li class="info-box">
+          <div class="value-name"><%= "#{@form.f_name10}:" %></div>
+          <% unless @addinfo.nil? %>
+            <% if @addinfo.client_id == @client.id %>
+              <div class="info-value"><%= @addinfo.add_text10 %></div>
+            <% end %>
+          <% end %>
+        </li>
+      <% end%>
+    </ul>
+  </div>
+
+  <div class="btn-box">
+    <div class="edit-standard">
+      <%= link_to '編集', edit_client_path(@client), method: :get, class: "btn-j" %>
     </div>
+    <% if @judg_f == false %>
+      <%= link_to '追加フォームの作成', new_form_path(:client_info => @client), method: :get, class: "btn-l" %>
+    <% elsif @judg_f == true %>
+      <%= link_to 'フォーム名の編集', edit_form_path(@form.id, :client_info => @client), method: :get, class: "btn-i" %>
+      <% if @judg_i == false %>
+        <%= link_to '追加情報の入力', new_addinfo_path(:client_info => @client), method: :get, class: "btn-i" %>
+      <% elsif @judg_i == true %>
+        <%= link_to '追加情報の編集', edit_addinfo_path(@addinfo.id, :client_info => @client), method: :get, class: "btn-i" %>
+      <% end %>
+    <% end %>
 
     
   </div>

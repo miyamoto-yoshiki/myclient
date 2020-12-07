@@ -1,0 +1,99 @@
+<%= render "tops/a-header" %>
+
+<div class="child-a">
+      <h3 class="text-title">追加フォームの名前を編集</h3>
+</div>
+
+<%= form_with model: @form, url: form_path(@form), method: :put, class:"add-form-parent", local: true do |f| %>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム１</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name1, class:"input-name", id:"f_name1", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム２</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name2, class:"input-name", id:"f_name2", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム３</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name3, class:"input-name", id:"f_name3", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム４</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name4, class:"input-name", id:"f_name4", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム５</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name5, class:"input-name", id:"f_name5", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム６</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name6, class:"input-name", id:"f_name6", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム７</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name7, class:"input-name", id:"f_name7", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム８</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name8, class:"input-name", id:"f_name8", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム９</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name9, class:"input-name", id:"f_name9", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">追加フォーム１０</label>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :f_name10, class:"input-name", id:"f_name10", placeholder:"例) 出身地" %>
+    </div>
+  </div>
+
+  <%= f.submit "保存する" ,class:"btn-h" %>
+<% end %>

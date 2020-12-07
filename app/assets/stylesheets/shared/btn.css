@@ -138,7 +138,7 @@
   border:1px solid #1B1B1B;
   font-weight: bold;
 	z-index:100;
-	margin: 0 auto;
+	margin: 30px auto;
 }
 .btn-f:hover {
 	 background: #ffa300;
@@ -146,4 +146,121 @@
 	 cursor: pointer;
    text-decoration: none;
    z-index:100;
+}
+.btn-g{
+	display: block;
+	width: 250px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+}
+.btn-g:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+   z-index:100;
+}
+.btn-h {
+	margin: 30px auto;
+  max-width: 180px;
+  text-align: left;
+  background-color: #ffa300;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border-bottom: 4px solid #d37800;
+}
+
+.btn-h:active {
+  transform: translateY(4px);
+  border-bottom: none;
+}
+.btn-i{
+	display: block;
+	width: 250px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin-left: 34px;
+}
+.btn-i:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+   z-index:100;
+}
+.btn-j{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin:0 350px 0 270px;
+}
+.btn-j:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+	 z-index:100;
+}
+.btn-k{
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin: 0 auto;
+}
+.btn-k:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+	 z-index:100;
+}
+.btn-l{
+	display: block;
+	width: 250px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #1B1B1B;
+	background: #fff;
+  border:1px solid #1B1B1B;
+  font-weight: bold;
+	z-index:100;
+	margin-left:230px;
+}
+.btn-l:hover {
+	 background: #ffa300;
+         color: #fff;
+	 cursor: pointer;
+   text-decoration: none;
+	 z-index:100;
 }

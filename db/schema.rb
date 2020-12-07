@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_103414) do
+ActiveRecord::Schema.define(version: 2020_12_04_023049) do
+
+  create_table "addinfos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "add_text1"
+    t.string "add_text2"
+    t.string "add_text3"
+    t.string "add_text4"
+    t.string "add_text5"
+    t.string "add_text6"
+    t.string "add_text7"
+    t.string "add_text8"
+    t.string "add_text9"
+    t.string "add_text10"
+    t.bigint "client_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["client_id"], name: "index_addinfos_on_client_id"
+  end
 
   create_table "clients", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
@@ -31,6 +48,23 @@ ActiveRecord::Schema.define(version: 2020_12_01_103414) do
     t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
+  create_table "forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "f_name1"
+    t.string "f_name2"
+    t.string "f_name3"
+    t.string "f_name4"
+    t.string "f_name5"
+    t.string "f_name6"
+    t.string "f_name7"
+    t.string "f_name8"
+    t.string "f_name9"
+    t.string "f_name10"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_forms_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
     t.string "first_name", null: false
@@ -47,5 +81,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_103414) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addinfos", "clients"
   add_foreign_key "clients", "users"
+  add_foreign_key "forms", "users"
 end
