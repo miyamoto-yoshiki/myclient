@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :clients
   resources :forms, only:[:new, :create, :edit, :update]
   resources :addinfos, only:[:new, :create, :edit, :update]
+  resources :tasks, only:[:index, :create]
 end
