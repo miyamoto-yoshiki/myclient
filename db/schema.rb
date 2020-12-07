@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_023049) do
+ActiveRecord::Schema.define(version: 2020_12_07_084442) do
 
   create_table "addinfos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "add_text1"
@@ -65,6 +65,15 @@ ActiveRecord::Schema.define(version: 2020_12_04_023049) do
     t.index ["user_id"], name: "index_forms_on_user_id"
   end
 
+  create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "task"
+    t.date "date"
+    t.bigint "client_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["client_id"], name: "index_tasks_on_client_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name", null: false
     t.string "first_name", null: false
@@ -84,4 +93,5 @@ ActiveRecord::Schema.define(version: 2020_12_04_023049) do
   add_foreign_key "addinfos", "clients"
   add_foreign_key "clients", "users"
   add_foreign_key "forms", "users"
+  add_foreign_key "tasks", "clients"
 end
