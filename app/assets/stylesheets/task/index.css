@@ -1,0 +1,22 @@
+.done-tasks{
+  display: flex;
+  flex-direction: column;
+}
+.done-t{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+}
+.tasks-date{
+  width: 120px;
+  margin: 0 20px;
+}
+.tasks-client{
+  width: 200px;
+}
+.tasks-task{
+  width: 400px;
+}

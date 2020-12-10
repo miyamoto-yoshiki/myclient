@@ -1,9 +1,11 @@
 class TopsController < ApplicationController
+  before_action :authenticate_user!
   def index
     get_today
     @task = Task.new
     @client = Client.where(user_id: current_user.id)
   end
+
   private
   def get_today
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']

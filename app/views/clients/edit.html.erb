@@ -110,8 +110,10 @@
       </div>
       <%= f.text_field :build_num, class:"input-default", id:"building", placeholder:"例）アクロスビル801"%>
     </div>
-    
-    
-    <%= f.submit "保存する" ,class:"btn-h" %>
+
+    <div class="btns">
+        <%= button_to '顧客の削除', client_path(@client), method: :delete, class: "btn-o" %>
+        <%= f.submit "保存" ,class:"btn-n" %>
+    </div>
   <% end %>
 </div>

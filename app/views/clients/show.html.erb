@@ -13,18 +13,23 @@
   </div>
 
   <div class="child-d">
+    <% unless @b_num.nil? %>
+      <div class="before-client">
+        <%= link_to '前の顧客に戻る', client_path(id: @before_client.id), method: :get, class: "btn-c" %>
+      </div>
+    <% else%>
+      <div class="blank"><%= ""%></div>
+    <% end %>
     <div class="back-index">
       <%= link_to '一覧に戻る', clients_path, method: :get, class: "btn-d" %>
     </div>
-    <div class="next-client">
-      <%= button_to '削除', client_path(@client), method: :delete, class: "btn-c" %>
-    </div>
-    <div class="next-client">
-      <%= link_to '次の顧客へ進む', client_path(id: @next_client.id), method: :get, class: "btn-c" %>
-    </div>
-   
-    
-    
+    <% unless @n_num.nil? %>
+      <div class="next-client">
+        <%= link_to '次の顧客へ進む', client_path(id: @next_client.id), method: :get, class: "btn-c" %>
+      </div>
+    <% else%>
+      <div class="blank"><%= "" %></div>
+    <% end %>
   </div>
 
   <div class="child-c">
@@ -176,37 +181,37 @@
       <% end %>
     <% end %>
   </div>
-  <div class="child-e">
-    <%= form_with model: @task, url: tasks_path, method: :post, class: 'form' do |f| %>
-      <%= f.hidden_field :redirect, :value => 1 , class: 'lavel' %>
-      <%= f.hidden_field :client_id, :value => @client.id %>
-      <%= f.label :日付を選択, class: 'lavel' %>
-      <%= f.date_field :date, class: 'date-select' %>
-      <%= f.label :予定を入力, class: 'lavel' %>
-      <%= f.text_field :task, class: 'text-input' %>
-      <%= f.submit '保存', class: 'btn-m' %>
-    <% end %>
-  
-    <div class=calendar>
-      <% @week_days.each do |day| %>
-        <div class='item'>
-          <div class='date'>
-            <%= day[:month] %>/<%= day[:date] %> <%= day[:wday]%>
-          </div>
-          <ul class='content'>
-            <% if day[:tasks].length != 0 %>
-              <% day[:tasks].zip(day[:ids]).each do |task, ids| %>
-                <% if @client.id == ids %>
-                  <li class='plan-list'><%= task %></li>
+  <div class="task-form">
+    <div class="child-e">
+      <%= form_with model: @task, url: tasks_path, method: :post, class: 'form' do |f| %>
+        <%= f.hidden_field :redirect, :value => 1 , class: 'lavel' %>
+        <%= f.hidden_field :client_id, :value => @client.id %>
+        <%= f.label :日付を選択, class: 'lavel' %>
+        <%= f.date_field :date, class: 'date-select' %>
+        <%= f.label :予定を入力, class: 'lavel' %>
+        <%= f.text_field :task, class: 'text-input' %>
+        <%= f.submit '保存', class: 'btn-m' %>
+      <% end %>
+    
+      <div class=shows-calendar>
+        <% @week_days.each do |day| %>
+          <div class='shows-item'>
+            <div class='date'>
+              <%= day[:month] %>/<%= day[:date] %> <%= day[:wday]%>
+            </div>
+            <ul class='content'>
+              <% if day[:tasks].length != 0 %>
+                <% day[:tasks].zip(day[:ids]).each do |task, ids| %>
+                  <% if @client.id == ids %>
+                    <li class='plan-list'><%= task %></li>
+                  <% end %>
                 <% end %>
               <% end %>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div class='item'>
-        <div class='content'>完了済みタスク</div>
+            </ul>
+          </div>
+        <% end %>
       </div>
+      <%= link_to 'タスク一覧', tasks_path, method: :get, class: "btn-l" %>
     </div>
   </div>
 </div>

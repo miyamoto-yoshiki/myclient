@@ -1,10 +1,13 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
+  def index
+    @alltasks = Task.all.order('date DESC')
+  end
   def new
     get_week
     @task = Task.new
     @client = Client.where(user_id: current_user.id)
   end
-
   def create
     @task = Task.create(task_params)
     @re = @task.redirect

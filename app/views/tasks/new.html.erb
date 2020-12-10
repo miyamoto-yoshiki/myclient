@@ -23,11 +23,18 @@
         <% if day[:tasks].length != 0 %>
           <% day[:tasks].zip(day[:ids]).each do |task, ids| %>
             <% @c = Client.find_by(id: ids) %>
-            <li class='plan-list'><%= "#{@c.last_name}様: "%><%= task %><%= @re %></li>
+              <% if @c.user_id == current_user.id %>
+                <li class='plan-list'>
+                  <%=link_to client_path(@c.id), method: :get, class:"c-link" do %>
+                  <%= "#{@c.last_name}様: "%>
+                <% end %>
+                <%= task %>
+                </li>
+              <% end %>
           <% end %>
         <% end %>
       </ul>
     </div>
   <% end %>
 </div>
-<%= link_to '完了済みタスク一覧', tasks_path, method: :get, class: "btn-l" %>
+<%= link_to 'タスク一覧', tasks_path, method: :get, class: "btn-l" %>

@@ -80,14 +80,12 @@
 	background: #fff;
   border:1px solid #1B1B1B;
   font-weight: bold;
-  z-index:100;
 }
 .btn-c:hover {
 	 background: #E85A70;
          color: #fff;
 	 cursor: pointer;
    text-decoration: none;
-   z-index:100;
 }
 .btn-d{
 	display: block;
@@ -98,15 +96,14 @@
 	color: #1B1B1B;
 	background: #fff;
   border:1px solid #1B1B1B;
-  font-weight: bold;
-  z-index:100;
+	font-weight: bold;
+	margin: 0 300px;
 }
 .btn-d:hover {
 	 background: #0C88CA;
          color: #fff;
 	 cursor: pointer;
    text-decoration: none;
-   z-index:100;
 }
 .btn-e{
 	display: block;
@@ -292,4 +289,41 @@
          color: #fff;
 	 cursor: pointer;
 	 text-decoration: none;
+}
+.btn-n {
+  width: 180px;
+  text-align: center;
+  background-color: #ffa300;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+	padding: 10px 24px;
+	margin-left: 40px;
+  border-radius: 4px;
+  border-bottom: 4px solid #d37800;
+}
+
+.btn-n:active {
+  transform: translateY(4px);
+  border-bottom: none;
+}
+.btn-o {
+  width: 180px;
+  text-align: center;
+  background-color: #FF3366;
+  font-size: 16px;
+  color: #FFF;
+	text-decoration: none;
+  font-weight: bold;
+	padding: 10px 24px;
+	margin-right: 40px;
+  border-radius: 4px;
+	border-bottom: 4px solid #CC3333;
+
+}
+
+.btn-o:active {
+  transform: translateY(4px);
+  border-bottom: none;
 }

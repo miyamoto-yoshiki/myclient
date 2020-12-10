@@ -1,13 +1,9 @@
-// Place all the styles related to the calendars controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-body {
-  background-color: rgb(114, 151, 161);
-}
+
 .child-e{
   justify-content: space-around;
   background-color: #3333;
   padding: 10px 0;
+  border-radius: 20px;
 }
 
 .calendar {
@@ -17,23 +13,26 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background-size: cover;
 }
 
 .item {
   margin: 0.5vw;
   border: 2px solid rgb(0, 0, 0);
-  width: 20vw;
-  height: auto;
+  width: 22vw;
+  height: 300px;
   background-color: #f5f5f5;
   box-shadow: 10px 10px 15px -10px;
+  overflow: auto;
+  border-radius: 20px;
 }
-.item-b {
+/* .item-b {
   margin: 0.5vw;
   border: medium solid rgb(0, 0, 0);
   width: 20vw;
   height: auto;
   background-color: rgb(246, 253, 255);
-}
+} */
 
 .date {
   height: 5vh;
@@ -54,6 +53,7 @@ body {
 
 .plan-list {
   margin: 1vh 0;
+  display: flex;
 }
 
 .form {
@@ -82,4 +82,11 @@ body {
   height: 4vh;
   width: 13vw;
   margin: 0 2vw;
+}
+.c-link{
+  text-decoration: none;
+  color: black;
+}
+.c-link:hover{
+  color: purple;
 }

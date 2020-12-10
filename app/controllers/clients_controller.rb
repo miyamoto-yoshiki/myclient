@@ -23,6 +23,7 @@ class ClientsController < ApplicationController
 
   def show
     get_next
+    get_before
     @form = Form.find_by(user_id: current_user.id)
     @addinfo = Addinfo.find_by(client_id: @client.id)
     @allforms = Form.all
@@ -110,11 +111,24 @@ class ClientsController < ApplicationController
     @cbox.each_with_index do |cid, num|
       unless num == @cbox.size - 1
         if cid.id == @client.id
-          @nextnum = num
+          @n_num = num
         end
-          @plusnum = @nextnum.to_i + 1
-          @next_id = @cbox[@plusnum]
+          @next_num = @n_num.to_i + 1
+          @next_id = @cbox[@next_num]
           @next_client = Client.find_by(id: @next_id)
+      end
+    end
+  end
+  def get_before
+    @cbox = Client.where(user_id: current_user.id).order(['field(user_id, ?)', current_user.id])
+    @cbox.each_with_index do |cid, num|
+      unless num == 0
+        if cid.id == @client.id
+          @b_num = num
+        end
+          @before_num = @b_num.to_i - 1
+          @before_id = @cbox[@before_num]
+          @before_client = Client.find_by(id: @before_id)
       end
     end
   end
