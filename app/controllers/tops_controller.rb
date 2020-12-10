@@ -1,13 +1,12 @@
 class TopsController < ApplicationController
   def index
-    get_week
+    get_today
     @task = Task.new
     @client = Client.where(user_id: current_user.id)
   end
   private
-  def get_week
+  def get_today
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
-
     @todays_wday = Date.today.wday
     wday_num = @todays_wday
 
@@ -23,14 +22,12 @@ class TopsController < ApplicationController
     ids = tasks.map do |ids|
       tasks_id.push(ids.client_id)
     end
-
     wday_num = Date.today.wday
     if wday_num >= 7
       wday_num = wday_num - 7
     end
 
     day = { month: (@todays_date).month, date: (@todays_date).day, tasks: today_tasks, wday: wdays[wday_num], ids: tasks_id }
-
     @todays_task.push(day)
   end
 end

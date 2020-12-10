@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  def index
+  def new
     get_week
     @task = Task.new
     @client = Client.where(user_id: current_user.id)
@@ -10,7 +10,7 @@ class TasksController < ApplicationController
     @re = @task.redirect
     if @re == 0
       @task.save
-      redirect_to action: :index
+      redirect_to action: :new
     elsif @re == 1
       @task.save
       redirect_to client_path(@task.client_id)
