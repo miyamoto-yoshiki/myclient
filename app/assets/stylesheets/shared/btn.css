@@ -194,7 +194,6 @@
 	background: #fff;
   border:1px solid #1B1B1B;
   font-weight: bold;
-	z-index:100;
 	margin-left: 34px;
 }
 .btn-i:hover {
@@ -202,7 +201,6 @@
          color: #fff;
 	 cursor: pointer;
    text-decoration: none;
-   z-index:100;
 }
 .btn-j{
 	display: block;
@@ -234,7 +232,6 @@
 	background: #fff;
   border:1px solid #1B1B1B;
   font-weight: bold;
-	z-index:100;
 	margin: 0 auto;
 }
 .btn-k:hover {
@@ -242,7 +239,6 @@
          color: #fff;
 	 cursor: pointer;
    text-decoration: none;
-	 z-index:100;
 }
 .btn-l{
 	display: block;
@@ -254,7 +250,6 @@
 	background: #fff;
   border:1px solid #1B1B1B;
   font-weight: bold;
-	z-index:100;
 	margin-left:230px;
 }
 .btn-l:hover {
@@ -262,5 +257,21 @@
          color: #fff;
 	 cursor: pointer;
    text-decoration: none;
-	 z-index:100;
+}
+
+.btn-m {
+  text-align: start;
+  background-color: #ffa300;
+  font-size: 15px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 2px 24px;
+  border-radius: 4px;
+  border-bottom: 4px solid #d37800;
+}
+
+.btn-m:active {
+  transform: translateY(4px);
+  border-bottom: none;
 }

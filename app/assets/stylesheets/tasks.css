@@ -4,10 +4,15 @@
 body {
   background-color: rgb(114, 151, 161);
 }
+.child-e{
+  justify-content: space-around;
+  background-color: #3333;
+  padding: 10px 0;
+}
 
 .calendar {
   width: 100vw;
-  margin-top: 15vh;
+  margin: 10vh 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +21,15 @@ body {
 
 .item {
   margin: 0.5vw;
+  border: 2px solid rgb(0, 0, 0);
+  width: 20vw;
+  height: auto;
+  background-color: #99CCCC;
+}
+.item-b {
+  margin: 0.5vw;
   border: medium solid rgb(0, 0, 0);
-  width: 12vw;
+  width: 20vw;
   height: auto;
   background-color: rgb(246, 253, 255);
 }
@@ -28,7 +40,7 @@ body {
   font-size: 3vh;
   align-items: center;
   justify-content: center;
-  border-bottom: medium solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .content {
@@ -36,6 +48,8 @@ body {
   padding: 5px;
   white-space: nowrap;
   overflow: scroll;
+  display: block;
+  
 }
 
 .plan-list {
@@ -46,7 +60,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15vh;
+  margin-top: 20vh;;
 }
 
 .lavel {
@@ -61,6 +75,11 @@ body {
 }
 
 .date-select {
+  height: 4vh;
+  width: 13vw;
+  margin: 0 2vw;
+}
+.client-select {
   height: 4vh;
   width: 13vw;
   margin: 0 2vw;

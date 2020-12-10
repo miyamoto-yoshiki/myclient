@@ -22,12 +22,15 @@ class ClientsController < ApplicationController
   end
 
   def show
+    get_next
     @form = Form.find_by(user_id: current_user.id)
     @addinfo = Addinfo.find_by(client_id: @client.id)
     @allforms = Form.all
     @allinfos = Addinfo.all
     @judg_f = form_judg
     @judg_i = addinfo_judg
+    get_week
+    @task = Task.new
   end
 
   def edit
@@ -65,5 +68,54 @@ class ClientsController < ApplicationController
   def addinfo_judg
     return true unless @addinfo.nil?
     return false if @addinfo.nil?
+  end
+
+  def task_params
+    params.require(:task).permit(:date, :task, :wday)
+  end
+
+  def get_week
+    wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
+
+    @todays_wday = Date.today.wday
+    wday_num = @todays_wday
+
+    @todays_date = Date.today
+    @week_days = []
+
+    tasks = Task.where(date: @todays_date..@todays_date + 6)
+
+    7.times do |x|
+      today_tasks = []
+      tasks_id = []
+
+      task = tasks.map do |task|
+        today_tasks.push(task.task) if task.date == @todays_date + x
+      end
+      ids = tasks.map do |ids|
+        tasks_id.push(ids.client_id) if ids.date == @todays_date + x
+      end
+
+      wday_num = Date.today.wday  + x
+      if wday_num >= 7
+        wday_num = wday_num - 7
+      end
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, tasks: today_tasks, wday: wdays[wday_num], ids: tasks_id }
+
+      @week_days.push(days)
+    end
+  end
+  def get_next
+    @cbox = Client.where(user_id: current_user.id).order(['field(user_id, ?)', current_user.id])
+    @cbox.each_with_index do |cid, num|
+      unless num == @cbox.size - 1
+        if cid.id == @client.id
+          @nextnum = num
+        end
+          @plusnum = @nextnum.to_i + 1
+          @next_id = @cbox[@plusnum]
+          @next_client = Client.find_by(id: @next_id)
+      end
+    end
   end
 end

@@ -1,4 +1,9 @@
 .contents{
+  background: image-url("/images/jack-o-lantern-with-glowing-smile.jpg");
+  background-size: cover;
+}
+
+.contents{
   display: flex;
   justify-content: space-around;
   height: 100vh;
@@ -8,11 +13,17 @@
   margin-top: 100px;
   height: 500px;
   border: #ccc 1px;
-  background-color: white;
+  
+  }
 }
 
 .left-contents{
   width: 400px;
+}
+.right-contents{
+  width: 600px;
+  background-image: image-url("ack-o-lantern-with-glowing-smile.jpg");
+  background-size: cover;
 }
 .indexs{
   display: flex;
@@ -20,9 +31,7 @@
   padding: 30px;
   align-items: center;
 }
-.right-contents{
-  width: 600px;
-}
+
 .task-index,
 .client-index{
   display: flex;

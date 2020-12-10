@@ -5,8 +5,9 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #e6e6e6;
+  /* background-image: image-url("images/jack-o-lantern-with-glowing-smile.jpg");
+  background-size: cover; */
 }
 header {
   padding: 30px 4% 10px;
@@ -26,7 +27,8 @@ h1 {
 .apps-name {	
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 30px;
+  font-family: 'Anton', sans-serif;
 }
 nav {
   margin: 0 0 0 auto;

@@ -66,9 +66,10 @@ ActiveRecord::Schema.define(version: 2020_12_07_084442) do
   end
 
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "task"
-    t.date "date"
+    t.string "task", null: false
+    t.date "date", null: false
     t.bigint "client_id", null: false
+    t.integer "redirect"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_tasks_on_client_id"
