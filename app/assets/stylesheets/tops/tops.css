@@ -1,18 +1,12 @@
 .contents{
   display: flex;
   justify-content: space-around;
-  height: 100vh;
-}
-.left-contents,
-.right-contents{
-  margin-top: 100px;
+  margin: 150px auto 0;
   height: 500px;
+  width: 90%;
   border: #ccc 1px;
-  background-color: white;
-}
-
-.left-contents{
-  width: 400px;
+  background-color:  #3333;
+  border-radius: 20px;
 }
 .indexs{
   display: flex;
@@ -20,9 +14,17 @@
   padding: 30px;
   align-items: center;
 }
-.right-contents{
-  width: 600px;
+.today-item {
+  margin: auto 0;
+  border: 2px solid rgb(0, 0, 0);
+  width: 25vw;
+  height: 300px;
+  background-color: #f5f5f5;
+  box-shadow: 10px 10px 15px -10px;
+  overflow: auto;
+  border-radius: 20px;
 }
+
 .task-index,
 .client-index{
   display: flex;
@@ -34,9 +36,6 @@
 }
 .client-index{
   margin: 10px 30px 30px 30px;
-}
-
-.text-a:hover{
 }
 .btn-circle {
   display: inline-block;
@@ -100,4 +99,8 @@
 .btn-circle span {
   position: relative;
   z-index: 99;
+}
+.notask-text{
+  text-align: center;
+  margin-top: 80px;
 }

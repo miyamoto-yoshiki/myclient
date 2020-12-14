@@ -6,6 +6,27 @@
   padding: auto ;
 
 }
+.clients {
+  display: flex;
+  flex-direction: column;
+}
+.client{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 300px;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+.client-name{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .child-z{
   height: 40px;
   width: 100px;
@@ -15,39 +36,3 @@
   top:700px;
   left:1200px;
 }
-
-
-
-.clients {
-  counter-reset:number; /*数字をリセット*/
-  list-style-type: none!important; /*数字を一旦消す*/
-  padding:0;
-}
-
-.client-name{
-  color: black;
-  text-decoration: none;
-}
-
-/* .text-title {
-  position: relative;
-  padding: 0.25em 1em;
-  border-top: solid 2px black;
-  border-bottom: solid 2px black;
-}
-.text-title:before, 
-.text-title:after {
-  content: '';
-  position: absolute;
-  top: -7px;
-  width: 2px;
-  height: -webkit-calc(100% + 14px);
-  height: calc(100% + 14px);
-  background-color: black;
-}
-.text-title:before {
-  left: 7px;
-}
-.text-title:after {
-  right: 7px;
-} */

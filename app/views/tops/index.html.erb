@@ -1,24 +1,34 @@
 
-<link rel="stylesheet" href="tops.scss">
-<link rel="stylesheet" href="tops.css">>
-
 <%= render "a-header"%>
-
 <div class="contents">
-  <div class="left-contents">
-    <div class="indexs">
-      <div class="client-index">
-        <%= link_to '顧客一覧', clients_path, method: :get, class: "btn-a" %>
-      </div>
-      <div class="task-index">
-        <%= link_to 'タスク一覧', root_path, method: :get, class: "btn-a" %>
-      </div>
+  <div class="indexs">
+    <div class="client-index">
+      <%= link_to '顧客一覧', clients_path, method: :get, class: "btn-a" %>
+    </div>
+    <div class="task-index">
+      <%= link_to '今週のタスク', new_task_path, method: :get, class: "btn-a" %>
     </div>
   </div>
-  
-  <div class="right-contents">
-    <div class="tasks">
-      <a class="todays-task">今日のタスク</a>
+  <% @todays_task.each do |day| %>
+  <div class='today-item'>
+    <div class='date'>
+      <%= day[:month] %>/<%= day[:date] %> <%= day[:wday]%>
+    </div>
+    <div class='content'>
+      <% unless day[:tasks].length == 0 %>
+        <% day[:tasks].zip(day[:ids]).each do |task, ids| %>
+          <% @c = Client.find_by(id: ids) %>
+          <% if ids == current_user.id %>
+            <div class='plan-list'>
+              <%=link_to client_path(@c.id), method: :get, class:"c-link" do %><%= "#{@c.last_name}様: "%><% end %>
+              <%= task %>
+            </div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <div class="notask-text"><%= "予定なし" %></div>
+      <% end %>
     </div>
   </div>
+  <% end %>
 </div>

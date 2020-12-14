@@ -64,3 +64,5 @@ gem 'rails-i18n'
 gem 'jquery-rails'
 
 gem 'pry-rails'
+
+gem 'active_hash'

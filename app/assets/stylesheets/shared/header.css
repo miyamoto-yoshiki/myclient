@@ -5,9 +5,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #e6e6e6;
-}
+} 
 header {
   padding: 30px 4% 10px;
   position: fixed;
@@ -17,7 +16,7 @@ header {
   background-color: black;
   display: flex;
   align-items: center;
-  z-index:100;
+  z-index:200;
 }
 h1 {
   margin: 0; padding: 0;
@@ -26,7 +25,8 @@ h1 {
 .apps-name {	
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 30px;
+  font-family: 'Anton', sans-serif;
 }
 nav {
   margin: 0 0 0 auto;
@@ -36,12 +36,11 @@ ul {
   margin: 0;
   display: flex;
 }
-. {
-  
+/* . {
   font-size: 20px;
   text-decoration: none;
   color: white;
-}
+} */
 .sign:hover{
  color: white;
 }
