@@ -211,7 +211,11 @@
           </div>
         <% end %>
       </div>
-      <%= link_to 'タスク一覧', tasks_path, method: :get, class: "btn-l" %>
+      <div class="btn-box-b">
+        <%= link_to '今週のタスク', new_task_path, method: :get, class: "btn-p" %>
+        <%= link_to 'タスク一覧', tasks_path, method: :get, class: "btn-p" %>
+      </div>
+    </div>
     </div>
   </div>
 </div>

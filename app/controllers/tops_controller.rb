@@ -19,7 +19,9 @@ class TopsController < ApplicationController
     tasks_id = []
 
     task = tasks.map do |task|
-      today_tasks.push(task.task)
+      if task.client_id == current_user.id
+        today_tasks.push(task.task)
+      end
     end
     ids = tasks.map do |ids|
       tasks_id.push(ids.client_id)

@@ -31,6 +31,7 @@
   background-color: white;
   height: 40px;
   align-items: center;
+  border-radius: 5px;
 }
 .info-value{
   font-weight: bold;
@@ -48,6 +49,10 @@
   padding-right: 125px;
   width: 90%;
   border-radius: 0 0 20px 20px ;
+}
+.btn-box-b{
+  display: flex;
+  justify-content: center;
 }
 .task-form{
   width: 90%;

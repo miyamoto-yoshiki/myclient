@@ -26,7 +26,7 @@
               <% if @c.user_id == current_user.id %>
                 <li class='plan-list'>
                   <%=link_to client_path(@c.id), method: :get, class:"c-link" do %>
-                  <%= "#{@c.last_name}様: "%>
+                  <%= "#{@c.last_name}様 : "%>
                 <% end %>
                 <%= task %>
                 </li>
