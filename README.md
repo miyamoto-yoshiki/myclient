@@ -8,8 +8,8 @@
   |---------------|---------------|
   |<img width="1440" alt="スクリーンショット 2020-12-17 17 04 57" src="https://user-images.githubusercontent.com/73294620/102460251-12341600-408a-11eb-8d2b-cf25d927294e.png">|<img width="1440" alt="スクリーンショット 2020-12-17 17 05 09" src="https://user-images.githubusercontent.com/73294620/102460263-17916080-408a-11eb-8722-6f8e3592a2bf.png">｜
 
-  | 1週間のタスク一覧＆タスク作成 | タスク一覧 |
-  |-------------------------------|------------|
+  | 1週間のタスク一覧＆タスク作成 | 全タスク一覧 |
+  |-------------------------------|--------------|
   |<img width="1440" alt="スクリーンショット 2020-12-17 17 19 55" src="https://user-images.githubusercontent.com/73294620/102461908-79eb6080-408c-11eb-811f-fd46719c238d.png">|<img width="1440" alt="スクリーンショット 2020-12-17 17 27 25" src="https://user-images.githubusercontent.com/73294620/102462470-29c0ce00-408d-11eb-89db-0eedc090e7e5.png">|
 
 ## アイデア
