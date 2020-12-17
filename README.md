@@ -1,6 +1,9 @@
 ## 個人制作アプリ My client
   ### &emsp;My clientは、ユーザーの必要に応じて情報登録フォームの追加ができる顧客管理アプリです。
-  <img width="1440" alt="スクリーンショット 2020-12-17 16 43 58" src="https://user-images.githubusercontent.com/73294620/102458177-36dabe80-4087-11eb-93b2-a8e6fb1c37e4.png">
+  | root |
+  |------|
+  |<img width="1440" alt="スクリーンショット 2020-12-17 16 43 58" src="https://user-images.githubusercontent.com/73294620/102458177-36dabe80-4087-11eb-93b2-a8e6fb1c37e4.png">|
+  |      |
 
 
 
