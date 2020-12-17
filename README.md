@@ -10,15 +10,10 @@
   |<img width="1440" alt="スクリーンショット 2020-12-17 16 53 38" src="https://user-images.githubusercontent.com/73294620/102459688-43601680-4089-11eb-84c1-80a357edc383.png">|
   |          |
 
-  | 顧客詳細 上部 |
-  |---------------|
-  |<img width="1440" alt="スクリーンショット 2020-12-17 17 04 57" src="https://user-images.githubusercontent.com/73294620/102460251-12341600-408a-11eb-8d2b-cf25d927294e.png">|
-  |               |
-
-  | 顧客詳細 下部 |
-  |---------------|
-  |<img width="1440" alt="スクリーンショット 2020-12-17 17 05 09" src="https://user-images.githubusercontent.com/73294620/102460263-17916080-408a-11eb-8722-6f8e3592a2bf.png">|
-  |               |
+  | 顧客詳細 上部 | 顧客詳細 下部 |
+  |---------------|---------------|
+  |<img width="1440" alt="スクリーンショット 2020-12-17 17 04 57" src="https://user-images.githubusercontent.com/73294620/102460251-12341600-408a-11eb-8d2b-cf25d927294e.png">|<img width="1440" alt="スクリーンショット 2020-12-17 17 05 09" src="https://user-images.githubusercontent.com/73294620/102460263-17916080-408a-11eb-8722-6f8e3592a2bf.png">｜
+  |               |               |
 
 ## アイデア
   ### ■「こんな入力フォームがあれば...」
