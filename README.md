@@ -23,12 +23,11 @@
 ## このアプリで得られる体験
   #### &emsp;必要に応じて入力フォームの追加と編集ができます。
   #### &emsp;顧客の詳細ページから直接、次の顧客や前の顧客の詳細ページに遷移できます。
-  #### &emsp;画像登録を用い、幅広い記録を可能にします。(今後実装予定)
   #### &emsp;トップページにその日のタスクが表示されるので、やらなければならない事がすぐにわかります。
 <br />
 
 ## 実装を完了した機能
-  #### &emsp;(1) サインイン機能
+  #### &emsp;(1) サインイン機能(devise)
   #### &emsp;(2) 顧客, タスク, フォームのCRUD機能
   #### &emsp;(3) テストの実施（model)<br>&emsp;&emsp;RSpec、factory_bot使用
 <br />
@@ -38,7 +37,14 @@
   #### &emsp;●タスクの横に完了ボタンを表示させ、クリックするとそのタスクを非表示にする仕様。<br>&emsp;&emsp;→残りのタスクを明確にするため、ユーザーのモチベーションに繋げるため。
   #### &emsp;●全タスク一覧画面において、完了済みのタスクにはチェックマークを表示させる仕様。<br>&emsp;&emsp;→全タスクで見たときに、意識しなければならないタスクを明確にするため。
 <br />
-  
+
+## 使用言語技術
+  #### 言語・フレームワーク<br>&emsp;&emsp;ruby 2.6.5/ rails 6.0.0
+  #### フロント<br>&emsp;&emsp;HTML/ CSS/ javascript/ 
+  #### データベース<br>&emsp;&emsp;MySQL2 0.5.3
+  #### テスト<br>&emsp;&emsp;RSpec/ factory_bot
+  #### 使用Gem<br>&emsp;&emsp;pry-rails/ devise/ rails-i18n<br>&emsp;&emsp;jquery-rails/ active_hash/ rubocop<br>&emsp;&emsp;factory_bot_rails/ rspec-rails
+<br />
+
 ## 連絡先
-  #### &emsp;宮本 良輝
-  #### &emsp;yo5shi2ki8@yahoo.co.jp
+  #### &emsp;宮本 良輝<br>yo5shi2ki8@yahoo.co.jp
