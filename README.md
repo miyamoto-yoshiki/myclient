@@ -1,24 +1,29 @@
-# README
+**個人制作アプリ My client**
+# My clientは、ユーザーの必要に応じて情報登録フォームの追加ができる顧客管理アプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
 
-Things you may want to cover:
+**アイデア**
+# ■前職で「こんな入力フォームがあれば...」と思いながら顧客管理アプリを使っていました
+## 前職で利用していた顧客管理アプリの既存の入力フォームだけでは、管理したい情報がカバーできていませんでした。
+## 必要に応じて自分でフォームをカスタマイズできたら便利だろうなあ、自分で作ってみよう！と思いました。
+# ■ターゲット
+## ターゲットは何かしらのエンド顧客を扱う職業の社会人。
+## その中でも、顧客ごとに必ず登録しておきたいある情報があるが、現在利用している顧客管理アプリにはその情報の入力フォームが無いため、備考欄などに追記する形で対応している人たち。
+## 不動産や美容師..etc
+ 
+**このアプリで得られる体験**
+## 必要に応じて入力フォームの追加と編集ができます。
+## 顧客の詳細ページから直接、次の顧客や前の顧客の詳細ページに遷移できます。
+## 画像登録を用い、幅広い記録を可能にします。(今後実装予定)
+## トップページにその日のタスクが表示されるので、やらなければならない事がすぐにわかります。
 
-* Ruby version
+ **実装を完了した機能の一覧**
+## (1) サインイン機能
+## (2) CRUD機能
+## (3) ）テストの実施（model)
+### RSpec、factory_bot使用
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**連絡先**
+### 宮本 良輝
+### yo5shi2ki8@yahoo.co.jp
