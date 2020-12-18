@@ -148,8 +148,7 @@
 
 #### Association
 - belongs_to :client
+<br />
 
-| ER図 |
-|------|
-|<img width="844" alt="スクリーンショット 2020-12-18 23 44 44" src="https://user-images.githubusercontent.com/73294620/102627401-7ee30980-418b-11eb-9c58-364b40f23ab9.png">
-|
+## ER図
+|<img width="844" alt="スクリーンショット 2020-12-18 23 44 44" src="https://user-images.githubusercontent.com/73294620/102627401-7ee30980-418b-11eb-9c58-364b40f23ab9.png">|
