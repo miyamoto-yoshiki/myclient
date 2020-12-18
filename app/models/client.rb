@@ -2,7 +2,7 @@ class Client < ApplicationRecord
   default_scope -> { order(last_kana: :asc) }
 
   belongs_to :user
-  has_many :addinfos , dependent: :destroy
+  has_one :addinfos , dependent: :destroy
   has_many :tasks, dependent: :destroy
 
   with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: '全角文字を使用してください' } do
