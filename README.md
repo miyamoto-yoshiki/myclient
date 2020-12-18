@@ -52,12 +52,6 @@
   #### 使用Gem<br>&emsp;&emsp;pry-rails/ devise/ rails-i18n<br>&emsp;&emsp;jquery-rails/ active_hash/ rubocop<br>&emsp;&emsp;factory_bot_rails/ rspec-rails
 <br />
 
-## 連絡先
-  #### &emsp;宮本 良輝<br>yo5shi2ki8@yahoo.co.jp
-<br />
-<br />
-<br />
-
 ## テーブル設計
 
 ### users テーブル
@@ -151,4 +145,10 @@
 <br />
 
 ## ER図
-|<img width="844" alt="スクリーンショット 2020-12-18 23 44 44" src="https://user-images.githubusercontent.com/73294620/102627401-7ee30980-418b-11eb-9c58-364b40f23ab9.png">|
+<img width="844" alt="スクリーンショット 2020-12-18 23 44 44" src="https://user-images.githubusercontent.com/73294620/102627401-7ee30980-418b-11eb-9c58-364b40f23ab9.png">
+<br />
+<br />
+<br />
+
+## 連絡先
+  #### &emsp;宮本 良輝<br>yo5shi2ki8@yahoo.co.jp
