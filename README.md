@@ -13,7 +13,8 @@
   |<img width="1440" alt="スクリーンショット 2020-12-17 17 19 55" src="https://user-images.githubusercontent.com/73294620/102461908-79eb6080-408c-11eb-811f-fd46719c238d.png">|<img width="1440" alt="スクリーンショット 2020-12-17 17 27 25" src="https://user-images.githubusercontent.com/73294620/102462470-29c0ce00-408d-11eb-89db-0eedc090e7e5.png">|
 <br />
 
-## 本番環境(heroku) #### &emsp;https://myclient.herokuapp.com/ ### &emsp;テストログインにはこちらをお使い下さい。#### &emsp;&emsp;メールアドレス: mytest@gmail.com&emsp;&emsp;パスワード: test3810
+## 本番環境(heroku) &emsp;https://myclient.herokuapp.com/ 
+  #### &emsp;テストログインにはこちらをお使い下さい。<br>### &emsp;&emsp;メールアドレス: mytest@gmail.com<br>&emsp;&emsp;パスワード: test3810
 
 ## アイデア
   ### ■「こんな入力フォームがあれば...」
