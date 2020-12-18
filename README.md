@@ -70,7 +70,6 @@
 | first_name         | string | null: false |
 | last_kana          | string | null: false |
 | first_kana         | string | null: false |
-| birthday           | date   | null: false |
 
 #### Association
 - has_one  :form
@@ -96,7 +95,7 @@
 
 #### Association
 - belongs_to :user
-- has_many :addinfos
+- has_one :addinfos
 - has_many :tasks
 
 ### forms テーブル
@@ -149,3 +148,8 @@
 
 #### Association
 - belongs_to :client
+
+| ER図 |
+|------|
+|<img width="844" alt="スクリーンショット 2020-12-18 23 44 44" src="https://user-images.githubusercontent.com/73294620/102627401-7ee30980-418b-11eb-9c58-364b40f23ab9.png">
+|
