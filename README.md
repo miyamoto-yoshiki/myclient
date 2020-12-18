@@ -14,7 +14,8 @@
 <br />
 
 ## 本番環境(heroku) &emsp;https://myclient.herokuapp.com/ 
-  #### &emsp;テストログインにはこちらをお使い下さい。<br>### &emsp;&emsp;メールアドレス: mytest@gmail.com<br>&emsp;&emsp;パスワード: test3810
+  ### &emsp;&emsp;メールアドレス: mytest@gmail.com
+  ### &emsp;&emsp;パスワード: test3810
 
 ## アイデア
   ### ■「こんな入力フォームがあれば...」
