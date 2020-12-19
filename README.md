@@ -32,9 +32,11 @@
 <br />
 
 ## 実装を完了した機能
-  #### &emsp;(1) サインイン機能(devise)
-  #### &emsp;(2) 顧客, タスク, フォームのCRUD機能
-  #### &emsp;(3) テストの実施（model)<br>&emsp;&emsp;RSpec、factory_bot使用
+  #### &emsp;(1) サインアップ, サインイン, ログアウト機能(devise)
+  #### &emsp;(2) 顧客の新規登録, 編集, 削除, 一覧表示機能
+  #### &emsp;(3) 追加フォームの新規登録, 編集機能
+  #### &emsp;(4) タスクの新規登録, 一覧表示機能
+  #### &emsp;(5) テストの実施（model)<br>&emsp;&emsp;RSpec、factory_bot使用
 <br />
 
 ## 今後実装予定の機能, 仕様
