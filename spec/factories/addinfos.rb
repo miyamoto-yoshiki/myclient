@@ -10,5 +10,6 @@ FactoryBot.define do
     add_text8 { 'テスト' }
     add_text9 { 'テスト' }
     add_text10 { 'テスト' }
+    client_id { 1 }
   end
 end

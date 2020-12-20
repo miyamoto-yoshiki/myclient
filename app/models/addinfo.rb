@@ -1,5 +1,5 @@
 class Addinfo < ApplicationRecord
-  belongs_to :client
+  belongs_to :client, optional: true
 
   with_options length: { maximum: 24} do
     validates :add_text1
