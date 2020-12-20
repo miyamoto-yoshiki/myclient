@@ -39,7 +39,7 @@
 .value-name{
   width: 130px;
   text-align: right;
-  margin-right: 10px;
+  
 }
 .btn-box{
   background-color: #3333;
@@ -78,4 +78,7 @@
 }
 .blank{
   width: 160px;
+}
+.colon{
+  margin-right: 10px;
 }

@@ -25,6 +25,7 @@ class AddinfosController < ApplicationController
   end
 
   def update
+    @form = Form.find_by(user_id: current_user.id)
     @client = Client.find(addinfo_params[:client_id])
     @addinfo = Addinfo.find(params[:id])
     if @addinfo.update(addinfo_params)

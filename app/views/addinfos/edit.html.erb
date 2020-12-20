@@ -4,6 +4,12 @@
       <h3 class="text-title">追加したフォームの情報を編集</h3>
 </div>
 
+<div class="gide-box">
+  <div class="gide-text">
+    <br>登録したい情報を24文字以内で入力してください。
+  </div>
+</div>
+
 <%= form_with model: @addinfo, url: addinfo_path(@addinfo), method: :put, class:"add-form-parent", local: true do |f| %>
   <%= f.hidden_field :client_id, :value => @client.id %>
   <div class="form-group">
