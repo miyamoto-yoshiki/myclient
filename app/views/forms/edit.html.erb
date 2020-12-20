@@ -4,6 +4,12 @@
       <h3 class="text-title">追加フォームの名前を編集</h3>
 </div>
 
+<div class="gide-box">
+  <div class="gide-text">
+    <br>16文字以内でフォームの名前を決めてください。
+  </div>
+</div>
+
 <%= form_with model: @form, url: form_path(@form), method: :put, class:"add-form-parent", local: true do |f| %>
   <div class="form-group">
     <div class='form-text-wrap'>
