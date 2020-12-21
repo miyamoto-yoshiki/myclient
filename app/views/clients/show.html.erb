@@ -193,14 +193,16 @@
   </div>
   <div class="task-form">
     <div class="child-e">
-      <%= form_with model: @task, url: tasks_path, method: :post, class: 'form' do |f| %>
-        <%= f.hidden_field :redirect, :value => 1 , class: 'lavel' %>
-        <%= f.hidden_field :client_id, :value => @client.id %>
-        <%= f.label :日付を選択, class: 'lavel' %>
-        <%= f.date_field :date, class: 'date-select' %>
-        <%= f.label :予定を入力, class: 'lavel' %>
-        <%= f.text_field :task, class: 'text-input' %>
-        <%= f.submit '保存', class: 'btn-m' %>
+      <%= form_with model: @task, url: tasks_path, method: :post, class: 'form', local: true do |f| %>
+        <table>
+          <%= f.hidden_field :redirect, :value => 1 , class: 'lavel' %>
+          <%= f.hidden_field :client_id, :value => @client.id %>
+          <%= f.label :日付を選択, class: 'lavel' %>
+          <%= f.date_field :date, class: 'date-select' %>
+          <%= f.label :予定を入力, class: 'lavel' %>
+          <%= f.text_field :task, class: 'text-input' %>
+          <%= f.submit '保存', class: 'btn-m' %>
+        </table>
       <% end %>
     
       <div class=shows-calendar>
