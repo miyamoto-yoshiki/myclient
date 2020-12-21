@@ -14,22 +14,22 @@ RSpec.describe Task, type: :model do
 
     context 'タスクの登録ができない時' do
       it 'タスク内容が空だと登録できないこと' do
-        @task.task ='' 
+        @task.task = nil
         @task.valid?
         expect(@task.errors.full_messages).to include("Task can't be blank")
       end
       it '日付が空だと登録できないこと' do
-        @task.date ='' 
+        @task.date = nil
         @task.valid?
         expect(@task.errors.full_messages).to include("Date can't be blank")
       end
       it '顧客IDが空だと登録できないこと' do
-        @task.client_id ='' 
+        @task.client_id = nil
         @task.valid?
         expect(@task.errors.full_messages).to include()
       end
       it 'リダイレクト番号が空だと登録できないこと' do
-        @task.redirect ='' 
+        @task.redirect = nil
         @task.valid?
         expect(@task.errors.full_messages).to include()
       end
