@@ -34,7 +34,7 @@ RSpec.describe User, type: :model do
       it 'last_nameは、全角（漢字・ひらがな・カタカナ）での入力が必須であること' do
         @user.last_name = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Last name 全角文字を使用してください')
+        expect(@user.errors.full_messages).to include('Last name には全角文字を使用してください')
       end
 
       it 'first_nameが空では登録できないこと' do
@@ -46,7 +46,7 @@ RSpec.describe User, type: :model do
       it 'first_nameは、全角（漢字・ひらがな・カタカナ）での入力が必須であること' do
         @user.first_name = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First name 全角文字を使用してください')
+        expect(@user.errors.full_messages).to include('First name には全角文字を使用してください')
       end
 
       it 'last_kanaが空では登録できないこと' do
@@ -58,13 +58,13 @@ RSpec.describe User, type: :model do
       it 'last_kanaは、全角での入力が必須であること' do
         @user.last_kana = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Last kana 全角カタカナを使用してください')
+        expect(@user.errors.full_messages).to include('Last kana には全角カタカナを使用してください')
       end
 
       it 'last_kanaは、カタカナでの入力が必須であること' do
         @user.last_kana = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include('Last kana 全角カタカナを使用してください')
+        expect(@user.errors.full_messages).to include('Last kana には全角カタカナを使用してください')
       end
 
       it 'first_kanaが空では登録できないこと' do
@@ -76,13 +76,13 @@ RSpec.describe User, type: :model do
       it 'first_kanaは、全角での入力が必須であること' do
         @user.first_kana = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First kana 全角カタカナを使用してください')
+        expect(@user.errors.full_messages).to include('First kana には全角カタカナを使用してください')
       end
 
       it 'first_kanaは、カタカナでの入力が必須であること' do
         @user.first_kana = 'あああ'
         @user.valid?
-        expect(@user.errors.full_messages).to include('First kana 全角カタカナを使用してください')
+        expect(@user.errors.full_messages).to include('First kana には全角カタカナを使用してください')
       end
       
       it 'passwordが6文字以上であれば登録できること' do
@@ -128,6 +128,26 @@ RSpec.describe User, type: :model do
 
       it 'emailに@が含まれていなければ登録できないこと' do
         @user.email = '1a1a1ayahoo.co.jp'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Email is invalid')
+      end
+      it 'emailに半角英数字以外が含まれていると登録できないこと' do
+        @user.email = 'あああ@yahoo.co.jp'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Email is invalid')
+      end
+      it 'emailに半角英数字以外が含まれていると登録できないこと' do
+        @user.email = 'アアア@yahoo.co.jp'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Email is invalid')
+      end
+      it 'emailに半角英数字以外が含まれていると登録できないこと' do
+        @user.email = 'ｱｱｱ@yahoo.co.jp'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Email is invalid')
+      end
+      it 'emailに半角英数字以外が含まれていると登録できないこと' do
+        @user.email = '亜嗚呼@yahoo.co.jp'
         @user.valid?
         expect(@user.errors.full_messages).to include('Email is invalid')
       end
