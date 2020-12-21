@@ -1,7 +1,7 @@
 class Client < ApplicationRecord
   default_scope -> { order(last_kana: :asc) }
 
-  belongs_to :user
+  belongs_to :user, optional: true
   has_one :addinfos , dependent: :destroy
   has_many :tasks, dependent: :destroy
 
@@ -15,7 +15,10 @@ class Client < ApplicationRecord
   end
 
   validates :phone_num,     format: { with: /\A[0-9]+\z/ } , length: { maximum: 11}
-  validates :email, uniqueness: true, presence: true
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, uniqueness: true, presence: true, format: {with: VALID_EMAIL_REGEX}
+
   validates :post_num, allow_blank: true, format: {with: /\A[0-9]+\z/ }
 
 end
