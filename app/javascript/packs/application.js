@@ -1,3 +1,6 @@
+import '../javascripts/application';
+import '../stylesheets/application';
+
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
