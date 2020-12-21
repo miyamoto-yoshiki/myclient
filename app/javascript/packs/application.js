@@ -1,12 +1,9 @@
-import '../javascripts/application';
-import '../stylesheets/application';
-
 require("@rails/ujs").start()
-require("@rails/activestorage").start()
+// require("@rails/activestorage").start()
 require("channels")
 
-require activestorage
-require turbolinks
-require_tree .
-require jquery
-require jquery_ujs
+require("jquery").start()
+require("jquery_ujs").start()
+require("turbolinks").start()
+//= require_tree .
+ 
