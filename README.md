@@ -20,7 +20,7 @@
 
 ## アイデア
   ### ■「こんな入力フォームがあれば...」
-   #### &emsp;前職で利用していた顧客管理アプリの既存の入力フォームだけでは、管理したい情報がカバーできていませんでした。<br>&emsp;必要に応じて自分でフォームをカスタマイズできたら便利だろうなあ、自分で作ってみよう！と思いました。
+   #### &emsp;前職で利用していた顧客管理アプリの既存の入力フォームだけでは、管理したい情報がカバーできていませんでした。#### &emsp;また、各顧客詳細ページへの遷移は一旦、顧客一覧画面を介する必要があり、連続して各顧客へ情報登録をしたい時などに使いづらさを感じていました。<br>&emsp;必要に応じて自分でフォームを追加してカスタマイズできたり、一覧を介さずに各顧客詳細ページ間の移動ができるアプリがあれば便利だろうなあ、自分で作ってみよう！と思いました。
   ### ■ターゲット
    #### &emsp;ターゲットは何かしらのエンド顧客を扱う職業の社会人。<br>&emsp;その中でも、顧客ごとに必ず登録しておきたい情報があるが、現在利用している顧客管理アプリにはその情報の入力フォームが無いため、備考欄などに追記する形で対応している人たち。<br>&emsp;不動産や美容師..etc
 <br />
@@ -33,9 +33,10 @@
 
 ## 実装を完了した機能
   #### &emsp;(1) サインアップ, サインイン, ログアウト機能(devise)
-  #### &emsp;(2) 顧客の新規登録, 編集, 削除, 一覧表示機能
+  #### &emsp;(2) 顧客の新規登録, 編集, 削除, 一覧表示機能, 各顧客詳細ページ間での遷移機能
   #### &emsp;(3) 追加フォームの新規登録, 編集機能
-  #### &emsp;(4) タスクの新規登録, 一覧表示機能
+  #### &emsp;(3) 追加フォームへの情報登録, 編集機能
+  #### &emsp;(4) タスクの新規登録, 一覧表示機能, その日のタスクをトップページに表示する機能
   #### &emsp;(5) テストの実施（model)<br>&emsp;&emsp;RSpec、factory_bot使用
 <br />
 
@@ -51,7 +52,7 @@
   #### フロント<br>&emsp;&emsp;HTML/ CSS/ JavaScript/ 
   #### データベース<br>&emsp;&emsp;MySQL2 0.5.3
   #### テスト<br>&emsp;&emsp;RSpec/ factory_bot
-  #### 使用Gem<br>&emsp;&emsp;pry-rails/ devise/ rails-i18n<br>&emsp;&emsp;jquery-rails/ active_hash/ rubocop<br>&emsp;&emsp;factory_bot_rails/ rspec-rails
+  #### 使用Gem<br>&emsp;&emsp;pry-rails/ devise/ rails-i18n<br>&emsp;&emsp; active_hash/ rubocop<br>&emsp;&emsp;factory_bot_rails/ rspec-rails
 <br />
 
 ## テーブル設計
@@ -141,6 +142,7 @@
 | date               | date       | null: false                    |
 | redirect           | integer    |                                |
 | client             | references | null: false, foreign_key: true |
+| user               | references | null: false, foreign_key: true |
 
 #### Association
 - belongs_to :client
