@@ -15,18 +15,14 @@
       <%= day[:month] %>/<%= day[:date] %> <%= day[:wday]%>
     </div>
     <div class='content'>
-      <% unless day[:tasks].length == 0 %>
-        <% day[:tasks].zip(day[:ids]).each do |task, ids| %>
-          <% @c = Client.find_by(id: ids) %>
-          <% if ids == current_user.id %>
-            <div class='plan-list'>
-              <%=link_to client_path(@c.id), method: :get, class:"c-link" do %><%= "#{@c.last_name}様: "%><% end %>
-              <%= task %>
-            </div>
-          <% end %>
+      <% day[:tasks].zip(day[:cid]).each do |task, cid| %>
+        <% @c = Client.find_by(id: cid) %>
+        <% if @c.user_id == current_user.id %>
+          <div class='plan-list'>
+            <%=link_to client_path(@c.id), method: :get, class:"c-link" do %><%= "#{@c.last_name}様: " %><%end%>
+            <%= task %>
+          </div>
         <% end %>
-      <% else %>
-        <div class="notask-text"><%= "予定なし" %></div>
       <% end %>
     </div>
   </div>
