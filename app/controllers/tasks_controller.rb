@@ -22,7 +22,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:date, :task, :wday, :client_id, :redirect)
+    params.require(:task).permit(:date, :task, :wday, :client_id, :redirect).merge(user_id: current_user.id)
   end
 
   def get_week
@@ -32,7 +32,7 @@ class TasksController < ApplicationController
     wday_num = @todays_wday
 
     @todays_date = Date.today
-    @week_days = []
+    @week_days = [] 
     @todays_task = []
 
     tasks = Task.where(date: @todays_date..@todays_date + 6)

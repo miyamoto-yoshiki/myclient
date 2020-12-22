@@ -14,24 +14,24 @@ class TopsController < ApplicationController
 
     @todays_date = Date.today
     @todays_task = []
+
     tasks = Task.where(date: @todays_date)
     today_tasks = []
-    tasks_id = []
+    client_id = []
 
     task = tasks.map do |task|
-      if task.client_id == current_user.id
         today_tasks.push(task.task)
-      end
     end
-    ids = tasks.map do |ids|
-      tasks_id.push(ids.client_id)
+    cid = tasks.map do |cid|
+      client_id.push(cid.client_id)
     end
+    
     wday_num = Date.today.wday
     if wday_num >= 7
       wday_num = wday_num - 7
     end
 
-    day = { month: (@todays_date).month, date: (@todays_date).day, tasks: today_tasks, wday: wdays[wday_num], ids: tasks_id }
+    day = { month: (@todays_date).month, date: (@todays_date).day, tasks: today_tasks, wday: wdays[wday_num], cid: client_id}
     @todays_task.push(day)
   end
 end
