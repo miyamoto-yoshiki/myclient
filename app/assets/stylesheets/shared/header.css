@@ -5,7 +5,9 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #e6e6e6;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-attachment: fixed;
 } 
 header {
   padding: 30px 4% 10px;
@@ -36,11 +38,6 @@ ul {
   margin: 0;
   display: flex;
 }
-/* . {
-  font-size: 20px;
-  text-decoration: none;
-  color: white;
-} */
 .sign:hover{
  color: white;
 }
