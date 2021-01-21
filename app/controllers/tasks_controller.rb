@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @alltasks = Task.all.order('date DESC')
   end
@@ -18,6 +19,11 @@ class TasksController < ApplicationController
       @task.save
       redirect_to client_path(@task.client_id)
     end
+  end
+  def destroy
+    @task= Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
   end
 
   private

@@ -344,3 +344,7 @@
 	 cursor: pointer;
 	 text-decoration: none;
 }
+.td-btn{
+	border-radius: 15px;
+	border: solid black 1px;
+}

@@ -2,15 +2,19 @@
   ### &emsp;My clientは、ユーザーの必要に応じて情報登録フォームの追加ができる顧客管理アプリです。
   | root | 顧客一覧 |
   |------|----------|
-  |<img width="1440" alt="スクリーンショット 2020-12-17 16 43 58" src="https://user-images.githubusercontent.com/73294620/102458177-36dabe80-4087-11eb-93b2-a8e6fb1c37e4.png">|<img width="1440" alt="スクリーンショット 2020-12-17 16 53 38" src="https://user-images.githubusercontent.com/73294620/102459688-43601680-4089-11eb-84c1-80a357edc383.png">|
+  |<img width="1440" alt="スクリーンショット 2021-01-21 18 38 31" src="https://user-images.githubusercontent.com/73294620/105332392-eb807680-5c17-11eb-8709-c642d67be689.png">|<img width="1440" alt="スクリーンショット 2021-01-21 18 39 54" src="https://user-images.githubusercontent.com/73294620/105332538-15399d80-5c18-11eb-89d5-c664e5c7f914.png">|
 
-  | 顧客詳細 上部 | 顧客詳細 下部 |
+  | 顧客詳細 上部 | 顧客詳細 上部 |
   |---------------|---------------|
-  |<img width="1440" alt="スクリーンショット 2020-12-17 17 04 57" src="https://user-images.githubusercontent.com/73294620/102460251-12341600-408a-11eb-8d2b-cf25d927294e.png">|<img width="1440" alt="スクリーンショット 2020-12-17 17 05 09" src="https://user-images.githubusercontent.com/73294620/102460263-17916080-408a-11eb-8722-6f8e3592a2bf.png">|
+  |<img width="1440" alt="スクリーンショット 2021-01-21 18 41 31" src="https://user-images.githubusercontent.com/73294620/105332851-66499180-5c18-11eb-839f-802e03494cdb.png">|<img width="1439" alt="スクリーンショット 2021-01-21 18 42 01" src="https://user-images.githubusercontent.com/73294620/105332864-6c3f7280-5c18-11eb-97ec-04b705cf9ab2.png">|
+
+  | 顧客詳細 下部 | 顧客詳細 下部 |
+  |---------------|---------------|
+  |<img width="1440" alt="スクリーンショット 2021-01-21 18 44 01" src="https://user-images.githubusercontent.com/73294620/105333098-add01d80-5c18-11eb-8f1f-a5e59313d430.png">|<img width="1440" alt="スクリーンショット 2021-01-21 18 44 08" src="https://user-images.githubusercontent.com/73294620/105333129-b7598580-5c18-11eb-9810-80ca4ab58c1c.png">|
 
   | 1週間のタスク一覧＆タスク作成 | 全タスク一覧 |
   |-------------------------------|--------------|
-  |<img width="1440" alt="スクリーンショット 2020-12-17 17 19 55" src="https://user-images.githubusercontent.com/73294620/102461908-79eb6080-408c-11eb-811f-fd46719c238d.png">|<img width="1440" alt="スクリーンショット 2020-12-17 17 27 25" src="https://user-images.githubusercontent.com/73294620/102462470-29c0ce00-408d-11eb-89db-0eedc090e7e5.png">|
+  |<img width="1440" alt="スクリーンショット 2021-01-21 18 49 31" src="https://user-images.githubusercontent.com/73294620/105336335-78c5ca00-5c1c-11eb-82dc-b05e99a98232.png">|<img width="1440" alt="スクリーンショット 2021-01-21 19 10 46" src="https://user-images.githubusercontent.com/73294620/105336387-854a2280-5c1c-11eb-9e62-20c504a35502.png">|
 <br />
 
 ## 本番環境(heroku) &emsp;https://myclient.herokuapp.com/ 
@@ -36,12 +40,12 @@
   #### &emsp;(2) 顧客の新規登録, 編集, 削除, 一覧表示機能, 各顧客詳細ページ間での遷移機能
   #### &emsp;(3) 追加フォームの新規登録, 編集機能
   #### &emsp;(3) 追加フォームへの情報登録, 編集機能
-  #### &emsp;(4) タスクの新規登録, 一覧表示機能, その日のタスクをトップページに表示する機能
+  #### &emsp;(4) タスクの新規登録, 削除機能, 一覧表示機能, その日のタスクをトップページに表示する機能
   #### &emsp;(5) テストの実施（model)<br>&emsp;&emsp;RSpec、factory_bot使用
 <br />
 
 ## 今後実装予定の機能, 仕様
-  #### 自身の構想の他に、知人,友人,前職の同僚などにこのアプリを使ってもらい、そのフォードバックから得たアイデアも含まれています。
+  #### 自身の構想の他に、知人,友人,前職の同僚などにこのアプリを使ってもらい、そのフィードバックから得たアイデアも含まれています。
   #### &emsp;●顧客の検索機能。<br>&emsp;&emsp;→ヘッダー部分に検索フォームを設置予定。名前だけでなく、携帯番号やメールアドレスでも検索ができるように実装。
   #### &emsp;●各顧客詳細ページにおいて、画像投稿機能。<br>&emsp;&emsp;→画像とその画像のタイトルを保存できるだけでも、接客記録の幅が広がるため。
   #### &emsp;●タスクの横に完了ボタンを表示させ、クリックするとそのタスクを非表示にする仕様。<br>&emsp;&emsp;→残りのタスクを明確にするため、ユーザーのモチベーションに繋げるため。

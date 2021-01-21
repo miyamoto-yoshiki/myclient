@@ -10,10 +10,14 @@
         <li class="done-t" >
           <div class ="tasks-date"> <%= t.date %> </div>
           <% @c = Client.find_by(id: t.client_id) %>
+          <% @t = t.id %>
           <% if t.user_id == current_user.id %>
             <div class ="tasks-client"> <%= "#{@c.last_name} #{@c.first_name}" %> </div>
             <div class ="tasks-task"> <%= t.task %> </div>
           <% end %>
+          <div class= "t-delete">
+            <%= button_to '削除', task_path(:id => @t), method: :delete, class: "td-btn" %>
+          </div>
         </li>
     <% end %>
   </ul>
