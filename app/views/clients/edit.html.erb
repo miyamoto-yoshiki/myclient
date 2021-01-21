@@ -116,6 +116,9 @@
   <% end %>
   </div>
   <div class="destroy-btn">
-    <%= button_to '顧客の削除', client_path(@client), method: :delete, class: "btn-o" %>
+    <%= button_to '顧客の削除', client_path(@client), method: :delete, class: "btn-o", id:"delete-btn" %>
+    <div class="delete-alert hidden", id="alert" >
+      この顧客に関する登録情報、タスクなどのあらゆる情報は削除されます。
+    </div>
   </div>
 </div>

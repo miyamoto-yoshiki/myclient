@@ -164,4 +164,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.delete-alert{
+  border: black solid 1px;
+  background-color: yellow;
+  position: absolute;
+  bottom: 200px;
+  height: 300px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.hidden{
+  display: none;
 }

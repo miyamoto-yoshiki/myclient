@@ -1,20 +1,22 @@
 <div class="parent">
   <%= render "tops/a-header"%>
 
-  <div class="child-a">
-      <h3 class="text-title">登録済み顧客一覧</h3>
-  </div>
-
   <div class="clients-index">
     <ul class="clients">
+      <div class="child-a">
+        <h3 class="text-title">登録済み顧客一覧</h3>
+      </div>
       <% @allclients.each do |c| %>
-        <% if c.user_id == current_user.id %>
-          <li class="client">
-            <%=link_to client_path(c.id), method: :get, class:"client-name" do %>
-              <%= c.last_name %><%= " " %><%= c.first_name %>
-            <% end %>
-          </li>
-        <% end %>
+      <% if c.user_id == current_user.id %>
+        <li class="lists" id= "lists">
+          <%=link_to client_path(c.id), method: :get, class:"client-name" do %>
+            <%= c.last_name %><%= " " %><%= c.first_name %>
+          <% end %>
+          <div class="phone-email hidden", id= "phone-email">
+            <%= c.phone_num %><br><%= c.email%>
+          </div>
+        </li>
+      <% end %>
       <% end %>
     </ul>
   </div>
