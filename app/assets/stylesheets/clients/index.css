@@ -1,28 +1,37 @@
 
 .child-a{
   text-align: center;
-  padding: auto ;
 
+  margin: 0 auto;
 }
 .clients {
-  display: flex;
   flex-direction: column;
 }
-.client{
+.lists{
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: white;
+  position: relative;
   width: 300px;
-  height: 40px;
+  height: 50px;
   margin: 10px auto;
-  border-radius: 10px;
 }
+
 .client-name{
   color: black;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+  border: black solid 1px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  margin: 10px auto;
+  padding: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .child-z{
@@ -33,4 +42,17 @@
   position: fixed;
   top:700px;
   left:1200px;
+}
+
+.phone-email{
+  height: 50px;
+  width: 200px;
+  border: solid black 1px;
+  background-color: wheat;
+  position: absolute;
+  top: 10px;
+  left: 290px;
+}
+.hidden{
+  display: none;
 }
