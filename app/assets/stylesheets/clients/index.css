@@ -46,12 +46,13 @@
 
 .phone-email{
   height: 50px;
-  width: 200px;
+  width: 220px;
   border: solid black 1px;
   background-color: wheat;
   position: absolute;
   top: 10px;
   left: 290px;
+  text-align: center;
 }
 .hidden{
   display: none;
